@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<MxvGlXmlClassifyFile CreateDate="2012-10-24" Creator="系统自动生成" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MxvGlXmlClassify Name="静态图符"><MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>车</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>箭头</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify><MxvGlXmlClassify Name="动态图符"><MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>破碎机1</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>刮板机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>手选带</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>压滤机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>浓缩机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>磁选机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>除铁器</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>除尘器</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>给煤机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>卧式离心机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>卧式离心机1</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>立式离心机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>浅槽</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>破碎机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>振动筛</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>原煤仓</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>矸石仓</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>泵</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>风机</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>洗煤厂系统</SubDirName>
+			<Name>末煤仓</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>原煤仓1</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>给煤机1</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>旋流机</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>弧形筛</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>刮板机1</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>桶</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>矸石仓1</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>末煤仓1</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>水箱</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>原煤仓（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>胶带机（动态）短</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>胶带机（动态）301</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>刮板机3（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>刮板机2（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>刮板机3（动态）短</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>筛（动态）左</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>筛（动态）右</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>破碎机1（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>破碎机2（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>浅槽（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>泵（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>风机（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>卧式离心机（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>立式离心机（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>桶（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>弧形筛（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>旋流器（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>磁选机（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>压滤机（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>浓缩机（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>洗煤厂系统</SubDirName><Name>水箱（动态）</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify></MxvGlXmlClassifyFile>

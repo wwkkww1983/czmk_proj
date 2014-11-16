@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<ClassFamily SchemaVersion="20050920" CreateDate="2012-12-20" Creator="JJOPSA">
+	<ClassFamilyName>采煤机类家族</ClassFamilyName><Des/>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>JJZC</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1362120945</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机截割电机" Name="JGDJ" TagName="采煤机截割电机" GlobalName="JJZC_JGDJ"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120912</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355968532</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="截割电流" Name="JGDJ_cuttCurrent" TagName="截割电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="截割绕组温度" Name="JGDJ_windTemp" TagName="截割绕组温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="截割电机轴温" Name="JGDJ_motorHotbox" TagName="截割电机轴温"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转报警" Name="JGDJ_stallAlarm" TagName="堵转报警"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸" Name="JGDJ_stallTrip" TagName="堵转跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸" Name="JGDJ_overcurTrip" TagName="过流跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="RTD温度跳闸" Name="JGDJ_RTDTrip" TagName="RTD温度跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转电流设定" Name="JGDJ_stallcurSet" TagName="堵转电流设定"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="RTD跳闸温度设定" Name="JGDJ_RTDTempSet" TagName="RTD跳闸温度设定"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸次数" Name="JGDJ_overcurTripNo" TagName="过流跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸次数" Name="JGDJ_stallTripNo" TagName="堵转跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（小时）" Name="JGDJ_runTimeh" TagName="运行时间（小时）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（分钟）" Name="JGDJ_runTimem" TagName="运行时间（分钟）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（秒）" Name="JGDJ_runTimes" TagName="运行时间（秒）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="统计信息复位" Name="JGDJ_statiReset" TagName="统计信息复位"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DO" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_cuttCurrent</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_windTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_motorHotbox</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_stallAlarm</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_stallTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_overcurTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_RTDTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_stallcurSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_RTDTempSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_overcurTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_stallTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_runTimeh</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_runTimem</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_runTimes</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_statiReset</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_cuttCurrent.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_windTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_motorHotbox.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_stallAlarm.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_stallTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_overcurTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_RTDTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_overcurTripNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_stallTripNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_runTimeh.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_runTimem.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JGDJ_runTimes.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120912</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机牵引电机" Name="QYDJ" TagName="采煤机牵引电机" GlobalName="JJZC_QYDJ"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120917</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355969143</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="牵引电流" Name="QYDJ_current" TagName="牵引电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="牵引电机温度" Name="QYDJ_motorTemp" TagName="牵引电机温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转报警" Name="QYDJ_stallAlarm" TagName="堵转报警"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸" Name="QYDJ_stallTrip" TagName="堵转跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸" Name="QYDJ_overcurTrip" TagName="过流跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="RTD温度跳闸" Name="QYDJ_RTDTrip" TagName="RTD温度跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转电流设定" Name="QYDJ_stallcurSet" TagName="堵转电流设定"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸次数" Name="QYDJ_overcurTripNo" TagName="过流跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸次数" Name="QYDJ_stallTripNo" TagName="堵转跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（小时）" Name="QYDJ_runTimeh" TagName="运行时间（小时）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（分钟）" Name="QYDJ_runTimem" TagName="运行时间（分钟）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（秒）" Name="QYDJ_runTimes" TagName="运行时间（秒）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="统计信息复位" Name="QYDJ_statiReset" TagName="统计信息复位"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DO" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_current</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_motorTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_stallAlarm</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_stallTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_overcurTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_RTDTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_stallcurSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_overcurTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_stallTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_runTimeh</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_runTimem</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_runTimes</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_statiReset</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_current.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_motorTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_stallAlarm.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_stallTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_overcurTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_RTDTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_overcurTripNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_stallTripNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_runTimeh.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_runTimem.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYDJ_runTimes.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120917</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机牵引变频器" Name="QYBPQ" TagName="采煤机牵引变频器" GlobalName="JJZC_QYBPQ"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120922</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355971777</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="母线电压" Name="QYBPQ_busVolt" TagName="母线电压"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="电机电压" Name="QYBPQ_motorVolt" TagName="电机电压"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="A相电流" Name="QYBPQ_aphaseCur" TagName="A相电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="B相电流" Name="QYBPQ_bphaseCur" TagName="B相电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="C相电流" Name="QYBPQ_cphaseCur" TagName="C相电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="实际频率" Name="QYBPQ_ActFreq" TagName="实际频率"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="设定频率" Name="QYBPQ_freqSet" TagName="设定频率"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="实际速度" Name="QYBPQ_ActSpeed" TagName="实际速度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="设定速度" Name="QYBPQ_speedSet" TagName="设定速度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="逆变器温度" Name="QYBPQ_invTemp" TagName="逆变器温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="电机RTD温度" Name="QYBPQ_RTDTemp" TagName="电机RTD温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="整流模块温度" Name="QYBPQ_recModTemp" TagName="整流模块温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="通讯状态" Name="QYBPQ_commStatus" TagName="通讯状态"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_busVolt</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_motorVolt</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_aphaseCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_bphaseCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_cphaseCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_ActFreq</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_freqSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_ActSpeed</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_speedSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_invTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_RTDTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_recModTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_commStatus</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_busVolt.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_motorVolt.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_aphaseCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_bphaseCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_cphaseCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_ActFreq.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_ActSpeed.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_invTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_RTDTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_recModTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>QYBPQ_commStatus.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120922</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机油泵电机" Name="YBDJ" TagName="采煤机油泵电机" GlobalName="JJZC_YBDJ"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120927</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355973116</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="电机温度" Name="YBDJ_temp" TagName="电机温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="电机电流" Name="YBDJ_motorCurV" TagName="电机电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="A相电流" Name="YBDJ_aphaseCur" TagName="A相电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="B相电流" Name="YBDJ_bphaseCur" TagName="B相电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="C相电流" Name="YBDJ_cphaseCur" TagName="C相电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转报警" Name="YBDJ_stallAlarm" TagName="堵转报警"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸" Name="YBDJ_stallTrip" TagName="堵转跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸" Name="YBDJ_overcurTrip" TagName="过流跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转电流设定" Name="YBDJ_stallcurSet" TagName="堵转电流设定"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸次数" Name="YBDJ_overcurTripNo" TagName="过流跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸次数" Name="YBDJ_stallTripNo" TagName="堵转跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（小时）" Name="YBDJ_runTimeh" TagName="运行时间（小时）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（分钟）" Name="YBDJ_runTimem" TagName="运行时间（分钟）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（秒）" Name="YBDJ_runTimes" TagName="运行时间（秒）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="统计信息复位" Name="YBDJ_statiReset" TagName="统计信息复位"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DO" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_temp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_motorCurV</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_aphaseCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_bphaseCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_cphaseCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_stallAlarm</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_stallTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_overcurTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_stallcurSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_overcurTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_stallTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_runTimeh</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_runTimem</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_runTimes</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_statiReset</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_temp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_motorCurV.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_aphaseCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_bphaseCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_cphaseCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_stallAlarm.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_stallTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_overcurTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_overcurTripNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_stallTripNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_runTimeh.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_runTimem.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YBDJ_runTimes.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120927</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机油箱" Name="YX" TagName="采煤机油箱" GlobalName="JJZC_YX"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120930</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355973220</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="油液位报警" Name="YX_oillevAlarm" TagName="油液位报警"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="液位低" Name="YX_lowLevel" TagName="液位低"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="油温" Name="YX_oilTemp" TagName="油温"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YX_oillevAlarm</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YX_lowLevel</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YX_oilTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YX_oillevAlarm.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YX_lowLevel.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YX_oilTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120930</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机破碎机" Name="PSJ" TagName="采煤机破碎机" GlobalName="JJZC_PSJ"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120935</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355973736</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="破碎机电机温度" Name="PSJ_motorTemp" TagName="破碎机电机温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="破碎机电机电流(功率）" Name="PSJ_motorCur" TagName="破碎机电机电流(功率）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转报警" Name="PSJ_stallAlarm" TagName="堵转报警"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸" Name="PSJ_stallTrip" TagName="堵转跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸" Name="PSJ_overcurTrip" TagName="过流跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="RTD温度跳闸" Name="PSJ_RTDTempTrip" TagName="RTD温度跳闸"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转电流设定" Name="PSJ_stallcurSet" TagName="堵转电流设定"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="RTD跳闸温度设定" Name="PSJ_RTDTempSet" TagName="RTD跳闸温度设定"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="过流跳闸次数" Name="PSJ_overcurTripNo" TagName="过流跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="堵转跳闸次数" Name="PSJ_stallTripNo" TagName="堵转跳闸次数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（小时）" Name="PSJ_runTimeh" TagName="运行时间（小时）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（分钟）" Name="PSJ_runTimem" TagName="运行时间（分钟）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行时间（秒）" Name="PSJ_runTimes" TagName="运行时间（秒）"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="统计信息复位" Name="PSJ_statiReset" TagName="统计信息复位"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DO" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_motorTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_motorCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_stallAlarm</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_stallTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_overcurTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_RTDTempTrip</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_stallcurSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_RTDTempSet</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_overcurTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_stallTripNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_runTimeh</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_runTimem</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_runTimes</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_statiReset</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_motorTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_motorCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_stallAlarm.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_stallTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_overcurTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_RTDTempTrip.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_stallTripNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_runTimeh.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_runTimem.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PSJ_runTimes.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120935</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机" Name="CMJ" TagName="采煤机" GlobalName="JJZC_CMJ"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120940</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355973947</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="主电源进线电流" Name="CMJ_mpowerCur" TagName="主电源进线电流"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="走向倾角" Name="CMJ_towaIncl" TagName="走向倾角"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="仰俯倾角" Name="CMJ_pitchIncl" TagName="仰俯倾角"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="行走方向" Name="CMJ_walkDirect" TagName="行走方向"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="行走速度" Name="CMJ_walkSpeed" TagName="行走速度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="行走牵引力" Name="CMJ_walkTrac" TagName="行走牵引力"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="所在支架号" Name="CMJ_bracketNo" TagName="所在支架号"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="故障信息" Name="CMJ_fault" TagName="故障信息"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="告警信息" Name="CMJ_alarm" TagName="告警信息"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_mpowerCur</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_towaIncl</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_pitchIncl</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_walkDirect</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_walkSpeed</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_walkTrac</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_bracketNo</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_fault</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_alarm</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_mpowerCur.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_towaIncl.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_pitchIncl.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_walkDirect.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_walkSpeed.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_walkTrac.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_bracketNo.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_fault.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CMJ_alarm.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120940</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机冷却水泵" Name="LQS" TagName="采煤机冷却水泵" GlobalName="JJZC_LQS"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120942</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355974052</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="进水流量" Name="LQS_InflFlow" TagName="进水流量"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="进水压力" Name="LQS_waterPres" TagName="进水压力"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="出水温度" Name="LQS_waterTemp" TagName="出水温度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>LQS_InflFlow</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>LQS_waterPres</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>LQS_waterTemp</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>LQS_InflFlow.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>LQS_waterPres.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>LQS_waterTemp.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120942</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-12-20" Creator="JJOPSA"><ClassID Description="采煤机喷雾水泵" Name="PWB" TagName="采煤机喷雾水泵" GlobalName="JJZC_PWB"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1362120945</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1355974124</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="进水流量" Name="PWB_InflFlow" TagName="进水流量"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="进水压力" Name="PWB_waterPres" TagName="进水压力"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PWB_InflFlow</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PWB_waterPres</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PWB_InflFlow.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PWB_waterPres.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1362120945</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

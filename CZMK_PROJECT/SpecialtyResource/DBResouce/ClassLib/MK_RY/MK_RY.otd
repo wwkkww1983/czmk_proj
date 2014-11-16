@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassFamily SchemaVersion="20050920" CreateDate="2012-04-20" Creator="MAFEI">
+	<ClassFamilyName>MK_RY</ClassFamilyName><Des>煤矿人员定位系统类家族</Des>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>MK_RY</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1338257210</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2012-04-20" Creator="MAFEI"><ClassID Description="人员" Name="RYRY" TagName="RYRY" GlobalName="MKRY_RYRY"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1338257210</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1338257210</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="人员卡编码" Name="RYCardID" TagName="人员卡编码"/>
+					<comment>人员卡编码，卡号为0表示该点未被使用</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT32</TypeName><Default>0</Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="分站编码" Name="FZID" TagName="分站编码"/>
+					<comment>分站编码</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="进入分站时间" Name="InTime" TagName="进入分站时间"/>
+					<comment>进入分站时间</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>TIME</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="工作时间" Name="WorkTime" TagName="工作时间"/>
+					<comment>工作时间</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+				
+<SubObjClassRef GlobalName="::AI" RefVersion="1"/></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-04-20" Creator="MAFEI"><ClassID Description="人员分站" Name="RYFZ" TagName="RYFZ" GlobalName="MKRY_RYFZ"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1335167560</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1335167560</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="分站类型" Name="FZType" TagName="分站类型"/>
+					<comment>分站类型1：井下分站；2：井上分站；3：入井分站；4：出井分站。此项只作为分站标志使用，不作为路径回放等逻辑判断</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default></Default><Min></Min><Max></Max><Enum>
+							<EnumItem Value="1" TagValue="井下分站"/>
+							<EnumItem Value="2" TagValue="井上分站"/>
+							<EnumItem Value="3" TagValue="入井分站"/>
+							<EnumItem Value="4" TagValue="出井分站"/></Enum></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="分站状态：1.正常；0：异常" Name="FZStatus" TagName="分站状态"/>
+					<comment>分站状态：1.正常；0：异常</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default>1</Default><Min></Min><Max></Max><Enum>
+							<EnumItem Value="1" TagValue="正常"/>
+							<EnumItem Value="0" TagValue="异常"/></Enum></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="分站编码，7位十进制数" Name="FZID" TagName="分站编码"/>
+					<comment>分站编码，7位十进制数</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT32</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="分站人数" Name="FZRS" TagName="分站人数"/>
+					<comment>分站人数</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="分站异常描述" Name="FZDes" TagName="分站描述"/>
+					<comment>分站异常描述</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING128</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-04-20" Creator="MAFEI"><ClassID Description="人员区域" Name="RYQY" TagName="RYQY" GlobalName="MKRY_RYQY"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1338187154</ClassVersion>
+			<comment>区域</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1338187154</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="区域编码，共5未十进制数。" Name="QYID" TagName="区域编码"/>
+					<comment>区域编码，共5位十进制数。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT32</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="区域人数" Name="QYRS" TagName="区域人数"/>
+					<comment>区域人数</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

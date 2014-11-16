@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><ClassLib xsi:noNamespaceSchemaLocation="..\..\..\PublicProject\debug\bin\CEConfig\OORTDBXML.xsd" SchemaVersion="20050920" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<LibName>基础类库</LibName>
+	<NameSpace/>
+	<LibType>基础类库</LibType>
+	<Creator>周进</Creator>
+	<CreateTime>2005-05-10</CreateTime>
+	<Version>1359361549</Version>
+	<Des>为MACS-SCADA对象数据库系统类定义的根基，在平台开发阶段设计，并由平台开发人员进行永久维护和技术支持，应用开发和工程设施人员不能进行任何修改，随系统安装盘一起发布。</Des>
+	<GlobalPlugFile>基础类库.plugin</GlobalPlugFile>
+	<CommonParamFile>基础类库.param</CommonParamFile>
+	<CommonStructFile>基础类库.struct</CommonStructFile>
+	<UserList>
+		<User>
+			<Name>周进</Name>
+			<Password>1234</Password>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>公共基类</ClassFamily>
+	<ClassFamily>变量类</ClassFamily>
+	<ClassFamily>设备类</ClassFamily>
+	<ClassFamily>容器类</ClassFamily>
+	<ClassFamily>脚本类</ClassFamily>
+        <ClassFamily>系统自诊断类</ClassFamily></ClassLib>

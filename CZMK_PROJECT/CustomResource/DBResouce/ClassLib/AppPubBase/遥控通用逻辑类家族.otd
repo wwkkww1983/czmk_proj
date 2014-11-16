@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<ClassFamily SchemaVersion="20050920" CreateDate="2011-06-10" Creator="YANGCHUNSHENG">
+	<ClassFamilyName>遥控通用逻辑类家族</ClassFamilyName><Des>遥控通用逻辑类家族,提供一种以子对象的方式，实现遥控功能。</Des>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>AppPubBase_EQControl</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1307929561</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2011-06-10" Creator="YANGCHUNSHENG"><ClassID Description="设备的所有逻辑，通过组态本类对象生成。" TagName="设备遥控逻辑组态类" Name="Control_Logic" GlobalName="AppPubBase_Control_Logic"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1307929561</ClassVersion>
+			<comment>继承自类POINT，提供PSCADA设备所需的挂/摘牌，遥控，定值组切换，选择、取消、执行，屏蔽，等功能的逻辑组态。也可以用于BAS专业的环控功能。</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1307924898</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="存使能判断表达式" Name="ExpressionEnable" TagName="使能表达式"/>
+					<comment>用于存储所有命令的使能判断表达式</comment>
+					<PropertyProcessChar>
+						<StoreChar>静态</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>64</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_Control_Logic_ExpressionEnable_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="KeyWord" TagName="表达式关键字" Description="关键字"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionTCL" TagName="表达式TCL语句" Description="TCL语句的一部分，需要具有独立语义"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionOutDes" TagName="表达式输出描述" Description="用于反映表达式执行情况"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="存储许可表达式" TagName="许可表达式" Name="ExpressionValidation"/>
+					<comment>用于存储所有命令的使能判断表达式</comment>
+					<PropertyProcessChar>
+						<StoreChar>静态</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>64</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_Control_Logic_ExpressionValidation_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="KeyWord" TagName="表达式关键字" Description="关键字"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionTCL" TagName="表达式TCL语句" Description="TCL语句的一部分，需要具有独立语义"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionOutDes" TagName="表达式输出描述" Description="用于反映表达式执行情况"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="存储控制输出表达式" TagName="输出表达式" Name="ExpressionOutControl"/>
+					<comment>用于存储所有命令的输出控制表达式</comment>
+					<PropertyProcessChar>
+						<StoreChar>静态</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>64</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_Control_Logic_ExpressionOutControl_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="KeyWord" TagName="表达式关键字" Description="关键字"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionOutDes" TagName="表达式输出描述" Description="用于反映表达式执行情况,在输出控制中可为空"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="OutputTCL" TagName="输出TCL语句" Description="输出执行的TCL语句"/>
+									<comment>仅当输出类型为TCL语句时有效。</comment>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="存储返校检验表达式" TagName="返校表达式" Name="ExpressionReturnCheck"/>
+					<comment>用于存储所有命令的返校表达式</comment>
+					<PropertyProcessChar>
+						<StoreChar>静态</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>64</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_Control_Logic_ExpressionReturnCheck_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="KeyWord" TagName="表达式关键字" Description="关键字"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionTCL" TagName="表达式TCL语句" Description="TCL语句的一部分，需要具有独立语义"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionOutDes" TagName="表达式输出描述" Description="用于反映表达式执行情况"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="Cycle" TagName="返校时间间隔Cycle" Description="返校时间间隔Cycle"/>
+									<comment/>
+									<ValueType>INT32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="Round" TagName="最大返较次数Round" Description="最大返较次数Round"/>
+									<comment/>
+									<ValueType>INT32</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="根据分合闸自动匹配" Name="AutoSelect" TagName="自动匹配"/>
+					<comment></comment>
+					<PropertyProcessChar>
+						<StoreChar>静态</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>64</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_Control_Logic_AutoSelect_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="KeyWord" TagName="关键字" Description="自动匹配命令的关键字"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="JudgeTcl" TagName="匹配条件" Description="匹配条件"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="OperateWord" TagName="匹配操作" Description="根据操作输出的关键字"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="返校后可能存在的处理在此组态." Name="ExpressionDealAfterCheck" TagName="处理表达式"/>
+					<comment>根据返校成功/失败结果在此处理.</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>64</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_Control_Logic_ExpressionDealAfterCheck_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="KeyWord" TagName="表达式关键字" Description="关键字"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionTCL" TagName="表达式TCL语句" Description="返校后执行的TCL语句"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="ExpressionAfterDes" TagName="TCL执行失败描述" Description="TCL执行失败描述"/>
+									<comment/>
+									<ValueType>STRING32</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="DealCondition" TagName="处理条件" Description="0-返校成功后处理&#xA;1-返校失败后处理&#xA;2-无论返校结构都处理&#xA;其它值，不处理&#xA;"/>
+									<comment/>
+									<ValueType>INT8</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+				</CommandList>
+				<OnEventList/>
+				<ReDefOnEventList>
+				</ReDefOnEventList>
+				<OutEventList>
+				</OutEventList>
+				<VirtualInterfaceList>
+				</VirtualInterfaceList>
+				<OverLoadList>
+				</OverLoadList>
+				<ClassBehaviorVersion>1300962546</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2011-06-10" Creator="YANGCHUNSHENG"><ClassID Description="使用该子对象,可以具备遥控功能." TagName="遥控操作子对象类" Name="EQ_Ctrl" GlobalName="AppPubBase_EQ_Ctrl"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1307691477</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1307691401</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="用于存储存储操作状态" TagName="操作状态" Name="Status"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="操作提示,提示操作信息" TagName="操作提示" Name="Tip"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING256</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="根据所组态的名称，建立逻辑的链接。" TagName="控制逻辑对象名" Name="ControlLogicName"/>
+					<comment>必须组态正确的控制逻辑点点名，否则无法是实现遥控功能</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING32</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="Step" TagName="执行状态"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command>
+						<FunctionName>Enable</FunctionName>
+						<FunctionDes>Enable</FunctionDes>
+						<comment>判断使能命令</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>KeyWord</Name><Des>关键字</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Type</Name><Des>判断类型</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>0代表直接终止，1代表全部动作完终止。</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para1</Name><Des>可选参数Para1,对应$PARA1</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para2</Name><Des>可选参数Para2,对应$PARA2</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para3</Name><Des>可选参数Para3,对应$PARA3</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para4</Name><Des>可选参数Para4,对应$PARA4</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>RefreshConfig</FunctionName><FunctionDes>更新操作序列</FunctionDes>
+						<comment>即时更新组态内容到操作序列.为调试用命令.</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>IExecute</FunctionName><FunctionDes>IExecute</FunctionDes>
+						<comment>根据组态的条件和动作进行定值组切换操作</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>KeyOpName</Name><Des>动作关键字，与各类条件中匹配。</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Type</Name><Des>动作类型，决定执行的类型。</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>0代表直接终止，1代表全部动作完终止。</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>ExeType</Name><Des>执行类型，需要禁止执行的表达式类型，以及是否输出操作日志。
+</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>使能判断条件=1
+许可检查条件=2
+输出表达式=4
+返校表达式=8
+操作日志=16
+默认0表示四种表达式都要执行且输出操作日志；
+4表示禁止执行输出表达式；
+12表示禁止执行输出表达式和返校表达式；
+16表示禁止输出操作日志。
+</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>LogPrefix</Name><Des>日志前缀,用于区分单遥，程控，顺控等</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para1</Name><Des>可选参数，组态用$PARA1表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para2</Name><Des>可选参数，组态用$PARA2表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para3</Name><Des>可选参数，组态用$PARA3表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para4</Name><Des>可选参数，组态用$PARA4表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>AutoExecute</FunctionName><FunctionDes>AutoExecute</FunctionDes>
+						<comment>根据当前状态，自动选择要执行的命令。</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>KeyOpName</Name><Des>动作关键字，与各类条件中匹配。</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Type</Name><Des>动作类型，决定执行的类型。</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>0代表直接终止，1代表全部动作完终止。</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>ExeType</Name><Des>执行类型，需要禁止执行的表达式类型，以及是否输出操作日志。
+</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>使能判断条件=1
+许可检查条件=2
+输出表达式=4
+返校表达式=8
+操作日志=16
+默认0表示四种表达式都要执行且输出操作日志；
+4表示禁止执行输出表达式；
+12表示禁止执行输出表达式和返校表达式；
+16表示禁止输出操作日志。
+</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>LogPrefix</Name><Des>日志前缀，用于区分单遥，程控，顺控等</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para1</Name><Des>可选参数，组态用$PARA1表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para2</Name><Des>可选参数，组态用$PARA2表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para3</Name><Des>可选参数，组态用$PARA3表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>Para4</Name><Des>可选参数，组态用$PARA4表示</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command></CommandList>
+				<OnEventList>
+				</OnEventList>
+				<ReDefOnEventList>
+				</ReDefOnEventList>
+				<OutEventList>
+				</OutEventList>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des>初始化,建立遥控逻辑和本类的联系.</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1307691477</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

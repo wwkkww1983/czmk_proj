@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContainerInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Rule><DBUnit>OCCHTDBPDC</DBUnit><DBQuery><Filter><and></and><Key><Property>ID</Property></Key><Condition><NumberCompare>&gt;</NumberCompare><Value>0</Value></Condition><Range></Range></Filter></DBQuery></Rule></ContainerInfo>

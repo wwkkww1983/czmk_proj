@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="PublicDef.xsd"/>
+	<xs:element name="PermDef">
+		<xs:annotation>
+			<xs:documentation>子系统权限操作及对象类型定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ObjTypeDef">
+					<xs:annotation>
+						<xs:documentation>对象类型定义</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ObjType" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="ObjTypeNameUnique">
+						<xs:selector xpath="ObjType"/>
+						<xs:field xpath="@Name"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="OprDef">
+					<xs:annotation>
+						<xs:documentation>操作定义</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Operation" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="OprNameUnique">
+						<xs:selector xpath="Operation"/>
+						<xs:field xpath="@Name"/>
+					</xs:unique>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="NameSpace" type="IDNameType" use="required">
+				<xs:annotation>
+					<xs:documentation>子系统权限命名空间</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Operation">
+		<xs:annotation>
+			<xs:documentation>操作定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ObjTypeRef">
+					<xs:annotation>
+						<xs:documentation>操作所对应的对象类型</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="AllType"/>
+							<xs:element name="ObjTypeName" type="IDNameType" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>对象类型名（引用）</xs:documentation>
+								</xs:annotation>
+								<xs:keyref name="ObjTypeNameRef" refer="ObjTypeNameUnique">
+									<xs:selector xpath="."/>
+									<xs:field xpath="."/>
+								</xs:keyref>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+					<xs:unique name="OprObjTypeNameRefUnique">
+						<xs:selector xpath="ObjTypeName"/>
+						<xs:field xpath="."/>
+					</xs:unique>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="ID_Attr"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ObjType">
+		<xs:annotation>
+			<xs:documentation>对象类型定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="InputObjName"/>
+				<xs:element name="NoObjName"/>
+				<xs:element name="ObjNameOption" type="IDNameType" maxOccurs="unbounded"/>
+			</xs:choice>
+			<xs:attributeGroup ref="ID_Attr"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OprGroup">
+		<xs:annotation>
+			<xs:documentation>操作组</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Operation" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OprGroup" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

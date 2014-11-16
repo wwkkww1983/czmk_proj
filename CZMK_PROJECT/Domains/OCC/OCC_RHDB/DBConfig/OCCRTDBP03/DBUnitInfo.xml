@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBUnitInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><IDGroup><ID>1203</ID><TagName>OCCRTDBP03</TagName><Description>电力3</Description></IDGroup><DBType>OODB</DBType><SourceType>MACS-SCADA I/O</SourceType><DataSource><ComputerName>CZMK_FEP2</ComputerName><IP_A>168.168.161.6</IP_A><IP_B></IP_B></DataSource><EASSource><ComputerName>CZMK_RHDB1</ComputerName><IP_A>168.168.161.10</IP_A><IP_B></IP_B></EASSource><EASSource><ComputerName>CZMK_WEB</ComputerName><IP_A>168.168.161.18</IP_A><IP_B></IP_B></EASSource></DBUnitInfo>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassFamily SchemaVersion="20050920" CreateDate="2009-06-08" Creator="周进">
+	<ClassFamilyName>系统自诊断类</ClassFamilyName><Des/>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>SystemDiag</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1359361549</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2009-06-08" Creator="周进"><ClassID Description="网卡点" TagName="NIC" Name="NIC" GlobalName="NIC"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::DI" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1244685121</ClassVersion>
+			<comment>m_value的值：0表示网络连通,1表示网络断开 
+报警组态： 1报警</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1244685121</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="需要诊断的目的网卡的IP地址" Name="DesIP" TagName="目的IP"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING16</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>POINT</ClassRef>
+						<FunctionName>is_valid</FunctionName><FuncType>虚函数</FuncType>
+						<Des>判断IP值是否有效</Des>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des>将NIC这个点注册到网络诊断管理类的vector中</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1244444645</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2009-07-13" Creator="周进"><ClassID Description="服务自诊断点" Name="Service" TagName="服务自诊断" GlobalName="Service"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="DI" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1359361549</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1359361549</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="诊断服务所在的机器名称" Name="hostName" TagName="主机名称"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING16</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="需要诊断的服务名称" Name="serviceName" TagName="服务名称"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING32</TypeName><Default></Default><Min></Min><Max></Max><Enum>
+							<EnumItem Value="RTDBManager" TagValue="实时数据库服务"/>
+							<EnumItem Value="EasServerAccessCorba" TagValue="报警服务"/>
+							<EnumItem Value="ElsQueryCorba" TagValue="日志服务"/>
+							<EnumItem Value="HDBServer" TagValue="趋势历史库服务"/>
+							<EnumItem Value="PermServer" TagValue="权限服务"/>
+							<EnumItem Value="HisArchMgrCorba" TagValue="归档服务"/>
+							<EnumItem Value="FileDLProxy" TagValue="文件下装代理服务"/>
+							<EnumItem Value="DataChannel" TagValue="FEP服务"/>
+							<EnumItem Value="CHECKTIME_SVR" TagValue="校时服务"/>
+							<EnumItem Value="SQLHDBCollector" TagValue="关系历史库收集服务"/>
+							<EnumItem Value="SQLHDBServer" TagValue="关系历史库服务"/>
+							<EnumItem Value="MXVDAEMON_SVR" TagValue="HMI守护进程"/>
+							<EnumItem Value="FTP_SVR" TagValue="FTP服务"/>
+							<EnumItem Value="WINRTS" TagValue="运算服务"/></Enum></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="identity" TagName="服务缺省身份"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="startTime" TagName="服务启动时间"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>UINT32</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="dataVersion" TagName="数据版本号"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>UINT32</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="programVersion" TagName="程序版本号"/>
+					<comment>格式为：个位数字，年，月，日，其中年月日都是2位数字表示</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING16</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="serviceStatus" TagName="服务运行状态"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="需要诊断的服务参数" Name="serviceParam" TagName="需要诊断的服务参数"/>
+					<comment>如配置FTP的用户名密码HollySys@HollySys等</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+				
+<BasicType><TypeName>STRING32</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des>将Service实例点注册到服务自诊断管理类的vector中</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1247477475</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

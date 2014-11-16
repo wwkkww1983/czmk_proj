@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<XMLTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Version>
+		<MajorVersion>1</MajorVersion>
+		<MinorVersion>0</MinorVersion>
+	</Version>
+	<DetailFilePath/>
+	<TreeItemInfo>
+		<TitleText>音频、视频</TitleText>
+		<TreeLeafItem>
+			<ItemImageIndex>32</ItemImageIndex>
+			<ItemSelectedImageIndex>33</ItemSelectedImageIndex>
+			<ItemType>CommonResource</ItemType>
+			<TitleText>AlarmSound0</TitleText>
+			<VariableName>ResAudioVideo:wav</VariableName>
+		</TreeLeafItem>
+		<TreeLeafItem>
+			<ItemImageIndex>32</ItemImageIndex>
+			<ItemSelectedImageIndex>33</ItemSelectedImageIndex>
+			<ItemType>CommonResource</ItemType>
+			<TitleText>AlarmSound1</TitleText>
+			<VariableName>ResAudioVideo:wav</VariableName>
+		</TreeLeafItem>
+		<TreeLeafItem>
+			<ItemImageIndex>32</ItemImageIndex>
+			<ItemSelectedImageIndex>33</ItemSelectedImageIndex>
+			<ItemType>CommonResource</ItemType>
+			<TitleText>AlarmSound2</TitleText>
+			<VariableName>ResAudioVideo:wav</VariableName>
+		</TreeLeafItem>
+		<TreeLeafItem>
+			<ItemImageIndex>32</ItemImageIndex>
+			<ItemSelectedImageIndex>33</ItemSelectedImageIndex>
+			<ItemType>CommonResource</ItemType>
+			<TitleText>AlarmSound3</TitleText>
+			<VariableName>ResAudioVideo:wav</VariableName>
+		</TreeLeafItem>
+	</TreeItemInfo>
+</XMLTree>

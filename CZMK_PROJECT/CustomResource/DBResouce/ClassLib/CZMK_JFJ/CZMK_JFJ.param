@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<CommonParamTableSet SchemaVersion="20050920" CreateDate="2014-07-29" Creator="ZHANGXIN">
+	<ParamTableSetID Name="ParamTableSet" TagName="公共参数表" Description=""/>
+	<ParamTableSetVersion>1</ParamTableSetVersion>
+	<comment/>
+	<ParamTableList/>
+</CommonParamTableSet>

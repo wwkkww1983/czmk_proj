@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MxvGlXmlLibFile CreateDate="2014-11-06" Creator="系统自动生成" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MxvGlXmlLibObj><Name>DT_断路器</Name><Des>DT_断路器</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_断路器</Name><Des>DX_断路器</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_小车断路器</Name><Des>DT_小车断路器</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_小车断路器</Name><Des>DX_小车断路器</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_N11B参数</Name><Des>DT_N11B参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_N11B参数</Name><Des>DX_N11B参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_TBDJ参数</Name><Des>DT_TBDJ参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_TBDJ参数</Name><Des>DX_TBDJ参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_YKDY参数</Name><Des>DT_YKDY参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_YKDY参数</Name><Des>DX_YKDY参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z11B参数</Name><Des>DT_Z11B参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z11B参数</Name><Des>DX_Z11B参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z11C参数</Name><Des>DT_Z11C参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z11C参数</Name><Des>DX_Z11C参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z1CQ参数</Name><Des>DT_Z1CQ参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z1CQ参数</Name><Des>DX_Z1CQ参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z1DJ参数</Name><Des>DT_Z1DJ参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z1DJ参数</Name><Des>DX_Z1DJ参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z1PB参数</Name><Des>DT_Z1PB参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z1PB参数</Name><Des>DX_Z1PB参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_ZPBN参数</Name><Des>DT_ZPBN参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_ZPBN参数</Name><Des>DX_ZPBN参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z842参数</Name><Des>DT_Z842参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z842参数</Name><Des>DX_Z842参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z861参数</Name><Des>DT_Z861参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z861参数</Name><Des>DX_Z861参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z871参数</Name><Des>DT_Z871参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z871参数</Name><Des>DX_Z871参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_ZB11参数</Name><Des>DT_ZB11参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_ZB11参数</Name><Des>DX_ZB11参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_BDDY参数</Name><Des>DT_BDDY参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_BDDY参数</Name><Des>DX_BDDY参数</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_Z842保护</Name><Des>DT_Z842保护</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DX_Z842保护</Name><Des>DX_Z842保护</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj>
+	<MxvGlXmlLibObj><Name>DT_动力变</Name><Des>DT_动力变</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj><MxvGlXmlLibObj><Name>DT_动力变2</Name><Des>DT_动力变2</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj><MxvGlXmlLibObj><Name>DT_低压开关</Name><Des>DT_低压开关</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>动态图符</LibType></MxvGlXmlLibObj><MxvGlXmlLibObj><Name>DX_低压开关</Name><Des>DX_低压开关</Des><UsedDefaultIcon>true</UsedDefaultIcon><LibType>对象图符</LibType></MxvGlXmlLibObj></MxvGlXmlLibFile>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<ClassFamily SchemaVersion="20050920" CreateDate="2014-11-03" Creator="CZMK_WKS1">
+	<ClassFamilyName>CZMK_JSX</ClassFamilyName><Des/>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>CZMKJSX</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1415004727</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2014-11-03" Creator="CZMK_WKS1"><ClassID Description="伟奇开关" Name="WQKG" TagName="WQKG" GlobalName="CZMKJSX_WQKG"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1415003171</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1415003171</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="系统工作电压" Name="GZFS" TagName="GZFS"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="K111回路工作电流" Name="K1DL" TagName="K1DL"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="K121回路工作电流" Name="K2DL" TagName="K2DL"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行方式&#xA;" Name="YXFS" TagName="YXFS"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="运行方式&#xA;" Name="K1ZT" TagName="K1ZT"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="K121回路工作状态&#xA;" Name="K2ZT" TagName="K2ZT"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="启动延时&#xA;" Name="QDYS" TagName="QDYS"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="切换延时&#xA;" Name="QHYS" TagName="QHYS"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="工作状态&#xA;" Name="GZZT" TagName="GZZT"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="远程启动&#xA;" Name="YCQD" TagName="YCQD"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="远程停止&#xA;" Name="YCTZ" TagName="YCTZ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

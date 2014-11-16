@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<ClassFamily SchemaVersion="20050920" CreateDate="2014-07-29" Creator="ZHANGXIN">
+	<ClassFamilyName>CZMK_FSX</ClassFamilyName><Des>风水监测系统</Des>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>CZMKFSX</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1406613103</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2014-07-29" Creator="ZHANGXIN"><ClassID Description="风水监测" Name="FSJC" TagName="FSJC" GlobalName="CZMKFSX_FSJC"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1406603724</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1406603724</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="通讯" Name="DITX" TagName="DITX"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="水压" Name="AISY" TagName="AISY"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="风压" Name="AIFY" TagName="AIFY"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="流量" Name="AILL" TagName="AILL"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="液位" Name="AIYW" TagName="AIYW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

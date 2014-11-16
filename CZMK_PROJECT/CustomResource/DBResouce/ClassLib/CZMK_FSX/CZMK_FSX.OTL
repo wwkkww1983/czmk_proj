@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassLib SchemaVersion="20050920">
+	<LibName>CZMK_FSX</LibName><NameSpace>CZMKFSX</NameSpace><LibType>自定义类库</LibType><Creator>ZHANGXIN</Creator><CreateTime>2014-07-29 11:08:43</CreateTime><Version>1406613103</Version>
+	<Des>成庄煤矿风水监测系统</Des><GlobalPlugFile>CZMK_FSX.plugin</GlobalPlugFile><CommonParamFile>CZMK_FSX.param</CommonParamFile><CommonStructFile>CZMK_FSX.struct</CommonStructFile><UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>CZMK_FSX</ClassFamily></ClassLib>

@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title>无标题文档</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<style type="text/css">  
+		td
+		{ 
+			border:solid #000000; 
+			border-width:0px 1px 1px 0px; 
+			padding:0px 5px; 
+		}
+		
+		table
+		{ 
+			border:solid #000000; 
+			border-width:2px 1px 1px 2px; 
+			font-size: 16px; 
+		}
+		
+		.duihao { 
+			font-size: 20px; 
+			font-weight: bold; 
+			font-style: italic; 
+			color: #009933; 
+		}
+		
+		.duihaoHide 
+		{ 
+			font-size: 20px; 
+			font-weight: bold; 
+			font-style: italic; 
+			color: #FFFFFF; 
+		}
+		
+		.duihaoHide_gray 
+		{ 
+			font-size: 20px; 
+			font-weight: bold; 
+			font-style: italic; 
+			color: #EEECE1; 
+		}
+		
+		.emptyCell 
+		{ 
+			background:#EEECE1; 
+		}
+		
+		body 
+		{ 
+			font-family: "微软雅黑"; 
+			margin-left: 0px; 
+			margin-top: 0px; 
+			margin-right: 0px; 
+			margin-bottom: 0px; 
+		}
+	</style>
+	<script language="javascript" type="text/javascript">
+		//屏蔽右键
+		document.oncontextmenu = function (e) { return false; }
+		//屏蔽鼠标选择页面
+		document.onselectstart = function (e) { return false; }
+
+		document.onkeydown = function (e) {
+			if ((event.keyCode == 8) ||                 //屏蔽退格删除键     
+				(event.keyCode == 116) ||                  //屏蔽 F5 刷新键     
+				(event.ctrlKey && event.keyCode == 82))   //Ctrl + R
+			{
+				event.keyCode = 0;
+				event.returnValue = false;
+			}
+		}
+		//动态添加专业行
+		function addProByDOM(rowNum, proCode, proName, colNum) {
+			var rowCodeCollection=document.getElementById("rowCodeCollection");
+			if(rowCodeCollection!=null)
+			{
+				if(rowCodeCollection.value.indexOf(proCode)<0)
+				{
+					rowCodeCollection.value=rowCodeCollection.value+","+proCode;
+				}
+			}
+			
+			//空白字符,用来填充空列
+			var strBlank = " ";
+			var colBlank = 0;
+
+			var cellText = "√";
+			var cellClass = "duihao";
+			var cellEmpty = " ";
+			var cellEmptyClass = "emptyCell";
+	        
+			var cellArray = ["M", "D", "A", "C", "S", "T","G", "U","P", "Q"];
+
+			var tab = document.getElementById("tabPubPri");
+			if (tab != null) {
+				var newRowTB = document.createElement("tbody");
+				var newRowTR = document.createElement("tr");
+				newRowTR.id = proCode
+				newRowTR.height = 20;
+
+				var newRowTD = document.createElement("td");
+				var newRowTN = document.createTextNode(rowNum);
+				newRowTD.appendChild(newRowTN);
+				newRowTD.setAttribute("align","center");
+				newRowTR.appendChild(newRowTD);
+
+				//根据colNum添加空列，空列个数=colNum-1
+				for (var i = 1; i < colNum; i++) {
+					var newRowTD = document.createElement("td");
+					newRowTD.setAttribute("width", 40);
+					var newRowTN = document.createTextNode(strBlank);
+					newRowTD.appendChild(newRowTN);
+					newRowTR.appendChild(newRowTD);
+					colBlank = colBlank + 1;
+				}
+
+				//专业名称列
+				var newRowTD = document.createElement("td");
+				//在专业名称列放置一个隐藏域，用于记录原始权限，初始化为空，后期数据绑定再赋值
+				newRowTD.innerHTML = "<input id='" + proCode + "@hd' type='hidden' value=''/>";
+				var newRowTN = document.createTextNode(proName);
+				newRowTD.setAttribute("colSpan", 2 - colBlank);
+				newRowTD.onclick=function(){selectRow(proCode,cellArray);}
+				newRowTD.onmousemove=function(){this.style.cursor='hand';}
+				//newRowTD.setAttribute("onclick","selectRow('"+proCode+"','"+cellArray+"')");
+				//newRowTD.setAttribute("onmousemove","this.style.cursor='hand'");
+				newRowTD.appendChild(newRowTN);
+				newRowTR.appendChild(newRowTD);
+
+				for (var i = 0; i < cellArray.length; i++) {
+					var newRowTD = document.createElement("td");
+					var newRowTN = document.createTextNode(cellEmpty);
+					newRowTD.id = proCode + "@" + cellArray[i];
+					
+					//if (proCode.indexOf("GD") <0 && cellArray[i]=="T") {
+						//newRowTD.className = cellEmptyClass;
+					//}
+					//else {
+						newRowTD.className = cellEmptyClass;//"";
+						newRowTD.innerHTML="<span id='"+ proCode + "@" + cellArray[i]+ "@chk' style='display:block;cursor:default;' lang='N' onclick='changeViewStatus(this)'  class='duihaoHide_gray'>√</span>";
+					//}
+					newRowTD.setAttribute("align", "center");
+					newRowTD.appendChild(newRowTN);
+					newRowTR.appendChild(newRowTD);
+				}
+
+				newRowTB.appendChild(newRowTR);
+				tab.appendChild(newRowTB);
+			}
+		}
+		//点击单元格切换对勾状态
+		function changeViewStatus(obj)
+		{
+			var pageStatus = document.getElementById("pageStatus");
+			if (obj != null && pageStatus != null && pageStatus.value == "edit") {
+				if (obj.lang == "Y") {
+					obj.className = "duihaoHide";
+					obj.lang = "N";
+				}
+				else {
+					obj.className = "duihao";
+					obj.lang = "Y";
+				}
+				var changedValue = document.getElementById("changedValue");
+				if (changedValue != null) {
+					if (changedValue.value.indexOf(obj.id) < 0) //如果修改没有被临时记录
+					{
+						if (changedValue.value == "") changedValue.value = changedValue.value + obj.id + ",";
+						else {
+							var prefix = obj.id.substr(0, obj.id.indexOf("@"));
+							var index = changedValue.value.lastIndexOf(prefix);
+							if (index < 0) changedValue.value = changedValue.value + obj.id + ",";
+							else {
+								var indexComma = changedValue.value.substring(index).indexOf(",");
+								changedValue.value = changedValue.value.substring(0, index + indexComma + 1) + obj.id + "," + changedValue.value.substring(index + indexComma + 1);
+							}
+						}
+					}
+				}
+			}
+		}
+		//改变页面状态
+		function changePageStatus(status)
+		{
+			var pageStatus = document.getElementById("pageStatus");
+			if (pageStatus != null)
+			{
+				var i;
+				var tds = document.getElementsByTagName("td");
+				var spans = document.getElementsByTagName("span");
+				var len=tds.length;
+				var lens=spans.length;
+				//将页面状态改为只读
+				pageStatus.value = status;
+				if (status == "readonly")
+				{
+					var changedValue = document.getElementById("changedValue");
+					if (changedValue != null) {
+						//还原修改记录
+						changedValue.value = "";
+					}
+					for( i=0; i<len; i++)
+					{
+						if(tds[i].id.indexOf('@')>0)
+						{
+							tds[i].className="emptyCell";
+						}
+					}
+					for(i=0;i<lens;i++)
+					{
+						spans[i].className="duihaoHide_gray";
+					}
+				}
+				else if(status="edit")
+				{
+					//改变td单元格背景色为可编辑状态	
+					for( i=0; i<len; i++)
+					{
+						if(tds[i].id.indexOf('@')>0)
+						{
+							tds[i].className="duihaoHide";
+						}
+					}
+					//改变td单元格中的span元素背景色为可编辑状态,只改变未打勾的单元格
+					for(i=0;i<lens;i++)
+					{
+						if(spans[i].className!="duihao")
+						{
+							spans[i].className="duihaoHide";
+						}
+					}
+				}
+			}
+		}
+    
+		function selectRow(proCode,cellArray)
+		{
+			var pageStatus = document.getElementById("pageStatus");
+			if(pageStatus.value=="edit")
+			{
+				var bSelAll=true;
+				for (var i = 0; i < cellArray.length; i++) {
+					var chk = document.getElementById(proCode + "@" + cellArray[i]+ "@chk");
+					if(chk!=null)
+					{
+						if(chk.className!="duihao")
+						{
+							bSelAll=false;
+							break;
+						}
+					}
+				}
+				if(bSelAll)
+				{
+					for (var i = 0; i < cellArray.length; i++) {
+						var chk = document.getElementById(proCode + "@" + cellArray[i]+ "@chk");
+						if(chk!=null)
+						{
+							chk.click();
+						}
+					}
+				}
+				else
+				{
+					for (var i = 0; i < cellArray.length; i++) {
+						var chk = document.getElementById(proCode + "@" + cellArray[i]+ "@chk");
+						if(chk!=null)
+						{
+							chk.className="duihaoHide";
+							chk.lang="N";
+							chk.click();
+						}
+					}
+				}
+			}
+		}
+		function selectCell(cellCode)
+		{
+			var pageStatus = document.getElementById("pageStatus");
+			if(pageStatus.value=="edit")
+			{
+				var bSelAll=true;
+				var rowCodeCollection=document.getElementById("rowCodeCollection");
+				if(rowCodeCollection!=null)
+				{
+					var rowArray = rowCodeCollection.value.split(',');
+					for(var i=0;i<rowArray.length;i++)
+					{
+						var chk = document.getElementById(rowArray[i] + "@" + cellCode + "@chk");
+						if(chk!=null)
+						{
+							if(chk.className!="duihao")
+							{
+								bSelAll=false;
+								break;
+							}
+						}
+					}
+					
+					if(bSelAll)
+					{
+						for(var i=0;i<rowArray.length;i++)
+						{
+							var chk = document.getElementById(rowArray[i] + "@" + cellCode + "@chk");
+							if(chk!=null)
+							{
+								chk.click();
+							}
+						}
+					}
+					else
+					{
+						for(var i=0;i<rowArray.length;i++)
+						{
+							var chk = document.getElementById(rowArray[i] + "@" + cellCode + "@chk");
+							if(chk!=null)
+							{
+								chk.className="duihaoHide";
+								chk.lang="N";
+								chk.click();
+							}
+						}
+					}
+				}
+			}
+		}
+	</script>
+	</head>
+	<body>
+		<table id="tabPubPri" width="100%" cellspacing="0" cellpadding="0">
+			<tr bgcolor="#d4d0c8">
+				<td width="40" rowspan="2" align="center">序号</td>
+				<td colspan="2" rowspan="2" align="center">系统分类</td>
+				<td colspan="11" align="center">功能分类</td>
+			</tr>
+			<tr bgcolor="#d4d0c8" align="center">
+				<td width="90" onclick="selectCell('M')" onmousemove="this.style.cursor='hand'">监视</td>
+				<td width="90" onclick="selectCell('D')" onmousemove="this.style.cursor='hand'">显示报警</td>
+				<td width="90" onclick="selectCell('A')" onmousemove="this.style.cursor='hand'">报警可确认</td>
+				<td width="90" onclick="selectCell('C')" onmousemove="this.style.cursor='hand'">控制操作</td>
+				<td width="90" onclick="selectCell('S')" onmousemove="this.style.cursor='hand'">报警设定</td>
+				<td width="90" onclick="selectCell('T')" onmousemove="this.style.cursor='hand'">检修挂牌</td>
+				<!--<td width="60">H-工作票审核</td>-->
+				<td width="90" onclick="selectCell('G')" onmousemove="this.style.cursor='hand'">系统管理</td>
+				<td width="90" onclick="selectCell('U')" onmousemove="this.style.cursor='hand'">用户管理</td>
+				<td width="90" onclick="selectCell('P')" onmousemove="this.style.cursor='hand'">权限管理</td>
+				<td width="90" onclick="selectCell('Q')" onmousemove="this.style.cursor='hand'">退出系统</td>
+			</tr>
+		</table>
+		<input id="pageStatus" type="hidden" value="readonly" NAME="pageStatus"> 
+		<!--记录发生过改变的单元格，省得以后还得遍历table查找变化 -->
+		<input id="changedValue" type="hidden" NAME="changedValue"> 
+		<input id="rowCodeCollection" type="hidden" name="rowCodeCollection" value="" />
+		<!--<input type="button" onclick="changePageStatus('edit')" value="edit">
+		<input type="button" onclick="changePageStatus('readonly')" value="cancel" ID="Button1">-->
+		<script language="javascript">
+	//addProByDOM('1','aaaa','aaaaaa',1);
+	//addProByDOM('1','aaaaa','aaaaaa',1);
+		</script>
+	</body>
+</html>

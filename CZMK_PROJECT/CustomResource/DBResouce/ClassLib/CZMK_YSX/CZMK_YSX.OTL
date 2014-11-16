@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassLib SchemaVersion="20050920">
+	<LibName>CZMK_YSX</LibName><NameSpace>CZMKYSX</NameSpace><LibType>自定义类库</LibType><Creator>ZHANGXIN</Creator><CreateTime>2014-07-28 09:32:49</CreateTime><Version>1409210562</Version>
+	<Des>成庄煤矿运输系统</Des><GlobalPlugFile>CZMK_YSX.plugin</GlobalPlugFile><CommonParamFile>CZMK_YSX.param</CommonParamFile><CommonStructFile>CZMK_YSX.struct</CommonStructFile><UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>CZMK_YSX</ClassFamily></ClassLib>

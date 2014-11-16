@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="PublicDef.xsd"/>
+	<xs:simpleType name="GroupRoleEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Member"/>
+			<xs:enumeration value="AssManager"/>
+			<xs:enumeration value="Manager"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="UserDef">
+		<xs:annotation>
+			<xs:documentation>权限系统用户（组）定义文件根元素</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UserList"/>
+				<xs:element ref="UserGroupList"/>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:positiveInteger" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserList">
+		<xs:annotation>
+			<xs:documentation>所有用户列表</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="User" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="UserNameUnique">
+			<xs:selector xpath="User"/>
+			<xs:field xpath="@Name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="User">
+		<xs:annotation>
+			<xs:documentation>用户定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attributeGroup ref="ID_Attr"/>
+			<xs:attribute name="logintime" type="xs:integer" use="required"/>
+			<xs:attribute name="password" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserGroupList">
+		<xs:annotation>
+			<xs:documentation>用户组列表</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UserGroup" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserGroup">
+		<xs:annotation>
+			<xs:documentation>用户组定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="GroupUser" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="UserName" type="IDNameType" use="required"/>
+						<xs:attribute name="GroupRole" type="GroupRoleEnum" use="required"/>
+					</xs:complexType>
+					<xs:keyref name="UserNameRef" refer="UserNameUnique">
+						<xs:selector xpath="."/>
+						<xs:field xpath="@UserName"/>
+					</xs:keyref>
+				</xs:element>
+				<xs:element ref="UserGroup" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="ID_Attr"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

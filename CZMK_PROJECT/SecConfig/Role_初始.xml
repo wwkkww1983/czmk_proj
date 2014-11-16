@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><RoleDef Version="1173767479" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><RoleList><Role CreatDate="2007-03-13 14:26:54" Creater="PermConfig" Des="拥有一切权限" Name="管理员"/></RoleList><RoleGroup CreatDate="2007-03-13 14:27:20" Creater="PermConfig" Des="" Name="管理员角色组"><RoleRef>管理员</RoleRef></RoleGroup></RoleDef>

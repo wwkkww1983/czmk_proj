@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MXVFunc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FuncInfo><Name>GetValueNumber</Name><Definition>GetValueNumber(iGroupOne,iGroupTwo,iGroupThree)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetValueNumber(GroupOne,GroupTwo,GroupThree)
+If (GroupOne = 1 And GroupTwo = 0 And GroupThree = 0) Then
+	GetValueNumber = "1"
+ElseIf (GroupOne = 0 And GroupTwo = 1 And GroupThree = 0) Then
+	GetValueNumber = "2"
+ElseIf (GroupOne = 0 And GroupTwo = 0 And GroupThree = 1) Then
+	GetValueNumber = "3"
+Else
+	GetValueNumber = "0"
+End If
+End Function</Body></FuncInfo><FuncInfo><Name>GetFourNumber</Name><Definition>GetFourNumber(iGroupOne,iGroupTwo,iGroupThree,iGroupFour)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetFourNumber(GroupOne,GroupTwo,GroupThree,GroupFour)
+if (GroupOne =1 and GroupTwo = 0 and GroupThree = 0 and GroupFour=0)then
+	GetFourNumber = "1"
+elseif (GroupOne = 0 and GroupTwo =1 and GroupThree = 0 and GroupFour = 0 )then
+	GetFourNumber = "2"
+elseif (GroupOne = 0 and GroupTwo = 0 and GroupThree =1 and GroupFour = 0)then
+	GetFourNumber = "3"
+elseif (GroupOne = 0 and GroupTwo = 0 and GroupThree = 0 and GroupFour = 1)then
+	GetFourNumber = "4"
+else 
+	GetFourNumber = "0"
+end if
+End Function</Body></FuncInfo></MXVFunc>

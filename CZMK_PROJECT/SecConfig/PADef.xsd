@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="PublicDef.xsd"/>
+	<xs:element name="PADef">
+		<xs:annotation>
+			<xs:documentation>角色权限分配定义文件更元素</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PA" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:positiveInteger" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PA">
+		<xs:annotation>
+			<xs:documentation>角色权限分配</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Permission" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="RoleName" type="IDNameType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Permission">
+		<xs:annotation>
+			<xs:documentation>权限定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ObjGlbName" type="xs:string" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>对象全局名</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="OprGlbName" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>操作全局名</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

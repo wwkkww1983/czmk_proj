@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassLib SchemaVersion="20050920">
+	<LibName>JJZC</LibName><NameSpace>JJZC</NameSpace><LibType>自定义类库</LibType><Creator>JJOPSA</Creator><CreateTime>2012-12-20 09:41:19</CreateTime><Version>1362120945</Version>
+	<Des>综采</Des><GlobalPlugFile>JJZC.plugin</GlobalPlugFile><CommonParamFile>JJZC.param</CommonParamFile><CommonStructFile>JJZC.struct</CommonStructFile><UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>采煤机类家族</ClassFamily></ClassLib>

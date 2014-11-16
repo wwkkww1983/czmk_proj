@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<GlobalPlugInSet CreateDate="2012-04-18" SchemaVersion="20050920" Creator="MAFEI">
+	<PlugInSetID Name="PlugInSet" TagName="类库插件" Description="人员定位类库插件函数"/>
+	<comment>人员定位插件函数，处理人员定位联网文件，把数据内容放入关系库；同时从关系库更新值到实时库中；</comment>
+	<PlugInSetInfo>
+		<Dll>MK_RY_Plugin</Dll>
+	</PlugInSetInfo>
+	<PlugInSetVersion>1335168237</PlugInSetVersion>
+	<PlugInList>
+		<PlugIn>
+			<FunctionName>Reg_MKRY_START</FunctionName><FunctionDes>实时库系统启动，热数据加载后进行的煤矿人员定位系统的相关初始化设置操作。</FunctionDes>
+			<PlugInEventInputList/>
+			<PlugInTimerInputList>
+			</PlugInTimerInputList>
+			<EventProcessMode>异步</EventProcessMode>
+			<comment/>
+			<PlugInVersion>1335168145</PlugInVersion>
+		</PlugIn>
+	</PlugInList>
+</GlobalPlugInSet>

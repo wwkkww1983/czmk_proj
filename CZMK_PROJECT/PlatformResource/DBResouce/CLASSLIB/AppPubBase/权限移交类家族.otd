@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassFamily SchemaVersion="20050920" CreateDate="2009-11-25" Creator="YANGCHUNSHENG">
+	<ClassFamilyName>权限移交类家族</ClassFamilyName><Des/>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>AppPubBase_HandoverRight</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1282532125</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2009-11-25" Creator="YANGCHUNSHENG"><ClassID Description="处理ISCS~PSCADA之间权限移交的逻辑,它可以以子对象的形式存在于开关或容器中.它自动处理与ISCS之间的交互,需要向HMI提交的移交状态信息借助HandoverRight_Status完成." TagName="权限移交处理类" Name="HandoverRight_Dealer" GlobalName="AppPubBase_HandoverRight_Dealer"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1282532125</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1268719166</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="ISCS指令" Name="IscsCmd" TagName="ISCS指令"/>
+					<comment>输入通道,对应到v6.0方案中的SO点.其值变化产生事件,本类接收处理.值中OPER的含义:0=reset,1=req,2=deny,3=acc,4=cancel,5=cancelack,6=exec,7=execack,8=notify,10=forceget,11=autoget.</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="发送给ISCS的指令" Name="PScadaSend" TagName="发送给ISCS的指令"/>
+					<comment>输出通道,对应v6.0方案中的AI点.</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="当前权限位置.0=中心,1=变电所,2=车站,3=无意义" Name="CurRightPos" TagName="当前权限位置"/>
+					<comment>输入通道,对应与方案v6.0中的POS点:</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AO" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="单次移交时间限制" Name="nHandOverTimeSpan" TagName="单次移交时间限制"/>
+					<comment>单位为秒</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT32</TypeName><Default>20</Default><Min>5</Min><Max>60</Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="专业标识号，来源于多专业同时（并发）进行权限移交需求。用于寻找相应专业的现实支持类（HandoverRight_Status）实例。如果工程中不支持多专业同时（并发）进行权限移交，则可以保持默认值即可，不需另外组态。" Name="nSpecialID" TagName="nSpecialID"/>
+					<comment></comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>UINT8</TypeName><Default>0</Default><Min>0</Min><Max>255</Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="显示权限位置的名称，而不是值。可以通过配置文件进行配置。" Name="RightPosDisplay" TagName="权限位置显示名称"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING32</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command><FunctionName>OpsCmd</FunctionName><FunctionDes>HMI发出的权限移交控制指令</FunctionDes>
+						<comment>此命令由操作站发出,与后台数据库中权限移交处理对象进行交互.</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>cmdID</Name><Des>命令ID.(1=req,2=deny,3=acc,4=exec)</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						
+<FuncParamItem>
+								<Name>nOpsIndent</Name><Des>操作员身份标识；0-中心，1-变电所，2-车站</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>HaveRight</FunctionName><FunctionDes>判断本地是否具有或自动具有权限</FunctionDes>
+						<comment>如果权限位置在本地则返回参数为1(表示有权限)；如果权限位置不在本地，但是其他服务节点（中心/车站/变电所）故障，则可根据一定优先规则返回1(表示自动具有权限)或者0(表示无权限).</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name><Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>yesno</Name><Des>返回参数,1=有权限,0=无权限</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						
+<FuncParamItem>
+								<Name>nOpsIndent</Name><Des>操作员身份标识；0-中心，1-变电所，2-车站</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>操作员身份标识；0-中心，1-变电所，2-车站</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>GetStateID</FunctionName><FunctionDes>取得当前的移交状态</FunctionDes>
+						<comment>取得当前的移交状态,返回参数值含义:0=sleep,1=executing,2=waitforOpsAcc,3=waitforIscsExec,4=waitforIscsAcc,5=waitforOpsExec,6=waitforIscsExecAck,7=waitforIscsCancelAck</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name><Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nStateID</Name><Des>状态标识</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>GetLocalRightPosStat</FunctionName><FunctionDes>获取当前点的设备权限位置情况</FunctionDes>
+						<comment>主要针对容器判断是否包含具有本地权限的设备，并返回当前点的设备权限位置</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>对象标识</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment></comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nLocalRightStat</Name><Des>本地权限状态</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment>0-当前设备/容器没有设备权限在本地
+1-当前设备/容器（的所有设备）权限位置在本地
+2-当前容器的部分设备权限位置在本地</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nRightPos</Name><Des>当前权限位置</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						
+<FuncParamItem>
+								<Name>nOpsIndent</Name><Des>操作员身份标识；0-中心，1-变电所，2-车站</Des>
+								<ValueType>short</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>操作员身份标识；0-中心，1-变电所，2-车站</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command></CommandList>
+				<OnEventList>
+					<OnEvent><FunctionName>OnIscsCmd</FunctionName><FunctionDes>IscsCmd值变化事件处理</FunctionDes>
+						<EventInputList>
+							<SubObjectEventInput>
+								<SubObjectName>IscsCmd</SubObjectName>
+								<OutEventRef>ValueChanged</OutEventRef>
+								<Impact>类级</Impact>
+							</SubObjectEventInput>
+						</EventInputList>
+						<TimerInputList/>
+						<EventProcessMode>同步</EventProcessMode>
+						<comment>IscsCmd值变化事件处理,在其中分析值,形成状态转换的一类触发事件.本接受事件由程序注册关联到IscsCmd,不需要工程组态作这个关联.</comment>
+					</OnEvent>
+					<OnEvent><FunctionName>CurRightPosChange</FunctionName><FunctionDes>权限位置子对象发生权限位变化时触发</FunctionDes>
+						<EventInputList>
+							<SubObjectEventInput>
+								<SubObjectName>CurRightPos</SubObjectName>
+								<OutEventRef>ValueChanged</OutEventRef>
+								<Impact>类级</Impact>
+							</SubObjectEventInput>
+						</EventInputList>
+						<TimerInputList/>
+						<EventProcessMode>同步</EventProcessMode>
+						<comment/>
+					</OnEvent></OnEventList>
+				<ReDefOnEventList/>
+				<OutEventList>
+					<OutEvent><FunctionName>BeginHandover</FunctionName><FunctionDes>开始移交事件</FunctionDes>
+						<comment>在ISCS/PSCADA任何一方发起权限移交时触发本事件.</comment>
+						<ParamMode>简单参数</ParamMode>
+						<ParamItem>
+							<TransDirection>in</TransDirection>
+							<ParamItemID Name="nTrigID" TagName="发起者" Description=""/>
+							<ValueType>INT8</ValueType>
+							<comment>0=中心,1=PSCADA,2=车站,3=无意义</comment>
+						</ParamItem>
+					</OutEvent>
+					<OutEvent><FunctionName>EndHandover</FunctionName><FunctionDes>移交结束事件</FunctionDes>
+						<comment>一次移交完成(成功或失败)后触发本事件</comment>
+						<ParamMode>简单参数</ParamMode>
+						<ParamItem>
+							<TransDirection>in</TransDirection>
+							<ParamItemID Name="nResult" TagName="移交结束标志" Description=""/>
+							<ValueType>INT8</ValueType>
+							<comment>1=成功,0=失败</comment>
+						</ParamItem>
+					</OutEvent>
+					<OutEvent><FunctionName>StateChange</FunctionName><FunctionDes>移交状态发生变化时触发本事件</FunctionDes>
+						<comment>整个移交由过程状态组成,在从一种状态切换到另一种状态时触发本事件.</comment>
+						<ParamMode>简单参数</ParamMode>
+						<ParamItem>
+							<TransDirection>in</TransDirection>
+							<ParamItemID Name="stateID" TagName="状态标识" Description="状态标识,0=sleep,1=executing,2=waitforOpsAcc,3=waitforIscsExec,4=waitforIscsAcc,5=waitforOpsExec,6=waitforIscsExecAck,7=waitforIscsCancelAck"/>
+							<ValueType>INT8</ValueType>
+							<comment/>
+						</ParamItem>
+					</OutEvent>
+					<OutEvent><FunctionName>OccCmd</FunctionName><FunctionDes>向中心副本转发权限移交命令</FunctionDes>
+						<comment>如果本身是正本;并且本身未参与权限移交,或者权限移交命令未涉及本身,则发出该事件</comment>
+						<ParamMode>自定义参数表</ParamMode>
+						<ParamTable>
+							<ParamTableID Name="ParamTable" TagName="参数表" Description="转发中心移交命令" GlobalName="AppPubBase_HandoverRight_Dealer_OccCmd_P"/>
+							<ParamTableVersion>1</ParamTableVersion>
+							<comment/>
+							<ParamItemList>
+								<ParamItem>
+									<TransDirection>in</TransDirection>
+									<ParamItemID Name="nCurCtrlWord" TagName="当前的移交命令" Description=""/>
+									<ValueType>INT32</ValueType>
+									<comment/>
+								</ParamItem>
+								<ParamItem>
+									<TransDirection>in</TransDirection>
+									<ParamItemID Name="nPreCtrlWord" TagName="以前的移交命令" Description=""/>
+									<ValueType>INT32</ValueType>
+									<comment/>
+								</ParamItem>
+							</ParamItemList>
+						</ParamTable>
+					</OutEvent>
+					<OutEvent><FunctionName>RightPosChange</FunctionName><FunctionDes>向中心副本转发权限位置变化命令</FunctionDes>
+						<comment>如果本身是正本;并且本身未参与权限移交,或者权限移交命令未涉及本身,则发出该事件</comment>
+						<ParamMode>自定义参数表</ParamMode>
+						<ParamTable>
+							<ParamTableID Name="ParamTable" TagName="参数表" Description="权限位置变化信息" GlobalName="AppPubBase_HandoverRight_Dealer_RightPosChange_P"/>
+							<ParamTableVersion>1</ParamTableVersion>
+							<comment/>
+							<ParamItemList>
+								<ParamItem>
+									<TransDirection>in</TransDirection>
+									<ParamItemID Name="nCurPos" TagName="新的权限位置" Description=""/>
+									<ValueType>INT32</ValueType>
+									<comment/>
+								</ParamItem>
+								<ParamItem>
+									<TransDirection>in</TransDirection>
+									<ParamItemID Name="nPrePos" TagName="老的权限位置" Description=""/>
+									<ValueType>INT32</ValueType>
+									<comment/>
+								</ParamItem>
+							</ParamItemList>
+						</ParamTable>
+					</OutEvent>
+					<OutEvent><FunctionName>RightLose</FunctionName><FunctionDes>当设备权限位置因移交不在本地后,发出该事件
+</FunctionDes>
+						<comment/>
+						<ParamMode>无参数</ParamMode>
+					</OutEvent>
+					<OutEvent><FunctionName>RightGet</FunctionName><FunctionDes>当设备权限位置因移交回到本地后,发出该事件
+</FunctionDes>
+						<comment/>
+						<ParamMode>无参数</ParamMode>
+					</OutEvent></OutEventList>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1282532125</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2009-11-25" Creator="YANGCHUNSHENG"><ClassID Description="中心用来接收和分发车站正本权限移交处理对象的变化事件" TagName="HandoverRight_OCC_EventDispatch" Name="HandoverRight_OCC_CmdDispatch" GlobalName="AppPubBase_HandoverRight_OCC_CmdDispatch"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1258707339</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1258707331</ClassPropertyVersion>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList>
+					<OnEvent><FunctionName>OccCmd</FunctionName><FunctionDes/>
+						<EventInputList>
+							<RelationClassEventInput>
+								<Impact>实例级</Impact>
+								<ClassRef RefVersion="1" GlobalName="HandoverRight_Dealer"/>
+								<OutEventRef>OccCmd</OutEventRef>
+							</RelationClassEventInput>
+						</EventInputList>
+						<TimerInputList/>
+						<EventProcessMode>同步</EventProcessMode>
+						<comment/>
+					</OnEvent>
+					<OnEvent><FunctionName>RightPosChange</FunctionName><FunctionDes/>
+						<EventInputList>
+							<RelationClassEventInput>
+								<Impact>实例级</Impact>
+								<ClassRef RefVersion="1" GlobalName="HandoverRight_Dealer"/>
+								<OutEventRef>RightPosChange</OutEventRef>
+							</RelationClassEventInput>
+						</EventInputList>
+						<TimerInputList/>
+						<EventProcessMode>同步</EventProcessMode>
+						<comment/>
+					</OnEvent></OnEventList>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1258687793</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2009-11-25" Creator="YANGCHUNSHENG"><ClassID Description="这个类设置了ISCS~PSCADA通信状态的两个DI子对象,用来给保存ISCS与PSCADA的通信连通状态.注意这个类的实例全局能且只能设置一个." TagName="权限移交通信状态支持类" Name="HandoverRight_Status" GlobalName="AppPubBase_HandoverRight_Status"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1280547875</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1280547875</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="中心实时库服务诊断点名（主机）" Name="sOccRtdbServicePtName" TagName="OccRtdbServicePtName"/>
+					<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING64</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="RtdbServiceTable" TagName="RtdbServiceTable"/>
+					<comment>如果包含PSCADA和BAS两个专业,每专业一个单元,则最多支持50个车站</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>100</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_HandoverRight_Status_RtdbServiceTable_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="nUnitID" TagName="数据库单元号" Description=""/>
+									<comment/>
+									<ValueType>INT16</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="sPscadaServicePN" TagName="变电所实时库服务诊断点名（主机）" Description=""/>
+									<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="sPscadaServicePN2" TagName="变电所实时库服务诊断点名（从机）" Description=""/>
+									<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="sStationServicePN" TagName="车站实时库服务诊断点名（主机）" Description=""/>
+									<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="sStationServicePN2" TagName="车站实时库服务诊断点名（从机）" Description=""/>
+									<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="备用中心实时库服务诊断点名（主机）" Name="sBOcRtdbServicePtName" TagName="BOcRtdbServicePtName"/>
+					<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING64</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="中心实时库服务诊断点名（从机）" Name="sOccRtdbServicePtName2" TagName="OccRtdbServicePtName2"/>
+					<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING64</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="备用中心实时库服务诊断点名（从机）" Name="sBOcRtdbServicePtName2" TagName="BOcRtdbServicePtName2"/>
+					<comment>需要为full name，即[单元号：诊断点名]形式</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING64</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>is_valid</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1265086428</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2009-12-25" Creator="YANGCHUNSHENG"><ClassID Description="ISCS权限移交容器,用来组织设备组或用来组织整站设备.其下必须配置一个HandoverRight_Dealer才能正常工作。" TagName="权限移交容器" Name="HandoverRight_Container" GlobalName="AppPubBase_HandoverRight_Container"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::Container" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1261729010</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1259147115</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="权限移交处理" Name="handoverRightDeal" TagName="权限移交处理"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="AppPubBase::HandoverRight_Dealer" RefVersion="1"/></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1183634400</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2010-03-18" Creator="YANGCHUNSHENG"><ClassID Description="这个类提供权限移交的相关进度信息,用以给界面显示提供支持，同时控制并发移交个数。注意这个类的实例一般每个专业设置一个（对应一个专业号SpecialID）。专业之间可以并发移交，同一专业不能并发移交。" TagName="权限移交显示支持类" Name="HandoverRight_ProccessInfo" GlobalName="AppPubBase_HandoverRight_ProccessInfo"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1282531418</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1282531418</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="当前移交状态标识（仅供发起者使用，且要求同时只能有一个权限移交发起）" Name="nStateID" TagName="当前移交状态标识"/>
+					<comment>0=sleep,1=executing,2=waitforOpsAcc,3=waitforIscsExec,4=waitforIscsAcc,5=waitforOpsExec,6=waitforIscsExecAck,7=waitforIscsCancelAck</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default>0</Default><Min>0</Min><Max>255</Max><Enum>
+						</Enum></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="权限移交进程提示信息,如who对dev的移交正在进行what,倒计时时间等." Name="sHandoverInfo" TagName="权限移交进程提示信息"/>
+					<comment>该信息不会在一次移交后自动清除,而是一直保持最后一次移交动作信息.（仅供发起者使用，且要求同时只能有一个权限移交发起）</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING128</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="当前操作的设备或容器权限移交子对象的点名" Name="sCurRightDealPtName" TagName="子对象的点名"/>
+					<comment>（仅供发起者使用，且要求同时只能有一个权限移交发起）</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING256</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="专业标识号，来源于多专业同时（并发）进行权限移交需求。用于与权限移交对象建立关联。如果工程中不支持多专业同时（并发）进行权限移交，则可以保持默认值即可，不需另外组态。" TagName="nSpecialID" Name="nSpecialID"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>UINT8</TypeName><Default>0</Default><Min>0</Min><Max>255</Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="本地发起的正在进行的权限移交个数" Name="nTrigNum" TagName="本地发起的正在进行的权限移交个数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT32</TypeName><Default>0</Default><Min>0</Min><Max>100000</Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="本地等待接受/拒绝的权限移交个数" Name="nToAcceptNum" TagName="本地等待接受/拒绝的权限移交个数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT32</TypeName><Default>0</Default><Min>0</Min><Max>100000</Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="当前接受移交者的身份" Name="nDestIdent" TagName="当前接受移交者的身份"/>
+					<comment>0-中心，1-变电所，2-车站</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default>0</Default><Min>0</Min><Max>255</Max><Enum/></BasicType></ClassProperty>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command><FunctionName>GetAllToAcceptInfoList</FunctionName><FunctionDes>获取等待接受的权限移交的信息列表</FunctionDes>
+						<comment>获取等待接受的权限移交的信息列表</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name><Des>移交过程信息点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>移交过程信息点号</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>infostring</Name><Des>经格式化的字符串信息</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment>经格式化的字符串信息</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败。返回如下格式信息，其中，“返回值”&lt;0 表示错误：
+返回值@设备点全名,状态,发起者,接受者,倒计时;设备点全名,状态,发起者,接受者,倒计时;...</Des>
+						</ReturnValue>
+					</Command></CommandList>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>is_valid</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1282220197</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

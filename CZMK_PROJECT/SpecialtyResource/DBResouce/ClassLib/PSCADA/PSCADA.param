@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB2312"?>
+<CommonParamTableSet SchemaVersion="20050920" CreateDate="2006-03-28" Creator="LIZHIJUN">
+	<ParamTableSetID Name="ParamTableSet" TagName="公共参数表" Description=""/>
+	<ParamTableSetVersion>1173838312</ParamTableSetVersion>
+	<comment/>
+	<ParamTableList>
+		<ParamTable>
+			<ParamTableID Description="权限移交中的事件传输参数结构" Name="RightChange_P" TagName="RightChange_P" GlobalName="PSCADA_RightChange_P"/>
+			<ParamTableVersion>1173838312</ParamTableVersion>
+			<comment/>
+			<ParamItemList>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="nTrig" TagName="权限移交发起者标识" Description=""/>
+					<ValueType>INT8</ValueType>
+					<comment/>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="nDest" TagName="权限被移交者标识" Description=""/>
+					<ValueType>INT8</ValueType>
+					<comment/>
+				</ParamItem>
+			</ParamItemList>
+		</ParamTable>
+	</ParamTableList>
+</CommonParamTableSet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassLib SchemaVersion="20050920">
+	<LibName>CZMK_JSX</LibName><NameSpace>CZMKJSX</NameSpace><LibType>自定义类库</LibType><Creator>CZMK_WKS1</Creator><CreateTime>2014-11-03 16:06:30</CreateTime><Version>1415004727</Version>
+	<Des>局扇系统</Des><GlobalPlugFile>CZMK_JSX.plugin</GlobalPlugFile><CommonParamFile>CZMK_JSX.param</CommonParamFile><CommonStructFile>CZMK_JSX.struct</CommonStructFile><UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>CZMK_JSX</ClassFamily></ClassLib>

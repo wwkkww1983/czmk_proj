@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColWidth xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Col Name="项号" Width="34"/><Col Name="项名" Width="34"/><Col Name="基本数据类型" Width="82"/><Col Name="值" Width="22"/><Col Name="时间" Width="34"/><Col Name="状态" Width="34"/><Col Name="收集周期" Width="58"/><Col Name="描述" Width="34"/><Col Name="量纲" Width="34"/><Col Name="显示格式" Width="58"/><Col Name="上限" Width="34"/><Col Name="下限" Width="34"/><Col Name="死区" Width="34"/><Col Name="死区类型" Width="58"/><Col Name="运算" Width="34"/></ColWidth>

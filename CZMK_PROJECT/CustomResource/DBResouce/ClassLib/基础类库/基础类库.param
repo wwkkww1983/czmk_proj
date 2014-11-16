@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<CommonParamTableSet xsi:noNamespaceSchemaLocation="..\..\..\PublicProject\debug\bin\CEConfig\OORTDBXML.xsd" SchemaVersion="20050920" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ParamTableSetID Name="ParamSet" TagName="公共参数表" Description="基础类库公共参数表集"/>
+	<ParamTableSetVersion>1273023889</ParamTableSetVersion>
+	<comment/>
+	<ParamTableList>
+		<ParamTable>
+			<ParamTableID TagName="统计值变化事件结构" Description="用于设备EQ对象的各个统计值变化输出事件" Name="SyntChange_P" GlobalName="SyntChange_P"/>
+			<ParamTableVersion>1130380131</ParamTableVersion>
+			<comment/>
+			<ParamItemList>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="curSynt" TagName="当前统计值" Description=""/>
+					<ValueType>INT32</ValueType>
+					<comment/>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="oldSynt" TagName="变化前统计值" Description=""/>
+					<ValueType>INT32</ValueType>
+					<comment/>
+				</ParamItem>
+			</ParamItemList>
+		</ParamTable>
+		<ParamTable>
+			<ParamTableID TagName="变量值变化事件结构" Description="用于模拟量、开关量等基本变量类型的值变化输出事件" Name="ValueChanged_P" GlobalName="ValueChanged_P"/>
+			<ParamTableVersion>1162791111</ParamTableVersion>
+			<comment/>
+			<ParamItemList>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="valueType" TagName="值类型名" Description="为系统支持的基本数据类型名之一，包括“bool、char、short、long、long long、unsigned char、unsigned short、unsigned long、float、double、string”"/>
+					<ValueType>STRING32</ValueType>
+					<comment/>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="valueLength" TagName="值长度" Description=""/>
+					<ValueType>UINT16</ValueType>
+					<comment/>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="curValue" TagName="当前值" Description=""/>
+					<ValueType>STRING256</ValueType>
+					<comment>将所有类型的值以内存缓冲区的形式存入</comment>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="oldValue" TagName="变化前的值" Description=""/>
+					<ValueType>STRING256</ValueType>
+					<comment>将所有类型的值以内存缓冲区的形式存入</comment>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="curStatus" TagName="当前状态" Description=""/>
+					<ValueType>INT8</ValueType>
+					<comment/>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="oldStatus" TagName="变化前的状态" Description=""/>
+					<ValueType>INT8</ValueType>
+					<comment/>
+				</ParamItem>
+			</ParamItemList>
+		</ParamTable>
+		<ParamTable>
+			<ParamTableID Description="用于模拟量、开关量等基本变量类型的状态变化输出事件" Name="StatusChanged_P" TagName="变量状态变化事件结构" GlobalName="StatusChanged_P"/>
+			<ParamTableVersion>1273023889</ParamTableVersion>
+			<comment/>
+			<ParamItemList>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="curStatus" TagName="当前状态" Description=""/>
+					<ValueType>INT8</ValueType>
+					<comment/>
+				</ParamItem>
+				<ParamItem>
+					<TransDirection>in</TransDirection>
+					<ParamItemID Name="oldStatus" TagName="变化前的状态" Description=""/>
+					<ValueType>INT8</ValueType>
+					<comment/>
+				</ParamItem>
+			</ParamItemList>
+		</ParamTable>
+	</ParamTableList>
+</CommonParamTableSet>

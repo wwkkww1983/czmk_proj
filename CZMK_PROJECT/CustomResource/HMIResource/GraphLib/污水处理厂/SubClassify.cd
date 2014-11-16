@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<MxvGlXmlClassifyFile CreateDate="2012-12-07" Creator="系统自动生成" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MxvGlXmlClassify Name="静态图符"/>
+	<MxvGlXmlClassify Name="动态图符"><MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵1(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>气罐(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>叶片(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵3(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>阀(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>空压泵(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>空压泵1(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>空压机(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>罗茨风机(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵2(动态图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>电动阀(动态图符)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>提升泵(动态图符)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>模拟量显示(动态图符)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>拖拽标题(动态图符)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>设备拖拽(动态图符)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>流量(动态图符)</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify><MxvGlXmlClassify Name="对象图符"><MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵(对象图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵1(对象图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵2(对象图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>污水泵3(对象图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>电动阀(对象图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>空压泵(对象图符）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>空压机(对象图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>污水处理厂</SubDirName>
+			<Name>罗茨风机(对象图符)</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>电动阀1(对象图符)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>提升泵(对象图符)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>污水处理厂</SubDirName><Name>模拟量显示(对象图符)</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify></MxvGlXmlClassifyFile>

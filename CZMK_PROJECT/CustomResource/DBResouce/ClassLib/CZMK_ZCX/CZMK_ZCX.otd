@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassFamily SchemaVersion="20050920" CreateDate="2014-10-31" Creator="CZMK_WKS1">
+	<ClassFamilyName>CZMK_ZCX</ClassFamilyName><Des/>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>CZMKZCX</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1415105647</ClassFamilyVersion>
+	<comment/>
+	<ClassList><Class CreateDate="2014-10-31" Creator="CZMK_WKS1"><ClassID Description="液压支架" Name="EEPX" TagName="EEPX" GlobalName="CZMKZCX_EEPX"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::EQ" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1414978300</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1414745390</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU通讯状态" Name="TXZT" TagName="TXZT"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU压力" Name="YALI" TagName="YALI"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU推移行程" Name="TYXC" TagName="TYXC"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::AI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU推移油缸传感器错误" Name="TYCW" TagName="TYCW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU压力传感器1错误" Name="P1CW" TagName="P1CW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU压力传感器2错误" Name="P2CW" TagName="P2CW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU电磁阀错误" Name="DCCW" TagName="DCCW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCUI2C错误" Name="I2CC" TagName="I2CC"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU自动补压错误" Name="NSAC" TagName="NSAC"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU最小压力错误" Name="PMIN" TagName="PMIN"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU键盘错误" Name="JPCW" TagName="JPCW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU相邻总线错误左" Name="BUSL" TagName="BUSL"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU相邻总线错误右" Name="BUSR" TagName="BUSR"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU中央总线错误" Name="CBCW" TagName="CBCW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU紧急停机&#xA;" Name="JJTJ" TagName="JJTJ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU闭锁（维修）开关" Name="BSWX" TagName="BSWX"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU停止" Name="STOP" TagName="STOP"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU采煤机安全区" Name="MJAQ" TagName="MJAQ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU远程控制错误" Name="YCCW" TagName="YCCW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU成组推溜功能开启&#xA;" Name="TLKQ" TagName="TLKQ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止成组推溜" Name="TLJZ" TagName="TLJZ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU跟机自动采煤功能开启" Name="ZDCK" TagName="ZDCK"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU跟机自动采煤功能关闭" Name="ZDCG" TagName="ZDCG"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU开启成组收护帮板" Name="KQSH" TagName="KQSH"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU开启成组伸护帮板" Name="KQBH" TagName="KQBH"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU自动补压功能开启" Name="BYKQ" TagName="BYKQ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止自动补压" Name="BYJZ" TagName="BYJZ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU向后拉溜功能开启" Name="HLKQ" TagName="HLKQ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止向后拉溜" Name="HLQJ" TagName="HLQJ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU单架顺序循环移架开启" Name="DYKQ" TagName="DYKQ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止单架顺序循环移架" Name="DYJZ" TagName="DYJZ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU无计程推溜&#xA;" Name="BPTL" TagName="BPTL"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU成组移架功能开启" Name="ZYKQ" TagName="ZYKQ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止成组移架" Name="ZYJZ" TagName="ZYJZ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止锚固" Name="JZMG" TagName="JZMG"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止喷雾" Name="JZPW" TagName="JZPW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止抬底" Name="JZTD" TagName="JZTD"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止收护帮板" Name="JZII" TagName="JZII"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止伸护帮板" Name="JZOI" TagName="JZOI"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止循环移架时收护帮板" Name="JZXI" TagName="JZXI"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止循环移架时伸护帮板" Name="JZXO" TagName="JZXO"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止自动跟机开采时收护帮板" Name="JZZC" TagName="JZZC"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU喷雾功能开启" Name="PWKQ" TagName="PWKQ"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止双向锁浮动功能" Name="JZSS" TagName="JZSS"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止红外线信号" Name="JZHW" TagName="JZHW"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止用于维修的向后拉溜" Name="JZXL" TagName="JZXL"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止割顶煤" Name="JZGT" TagName="JZGT"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止割底煤" Name="JZGB" TagName="JZGB"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止后部成组推溜" Name="JZBP" TagName="JZBP"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止放顶煤" Name="JZFB" TagName="JZFB"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="EEP_SCU禁止拉架时喷雾" Name="JZLP" TagName="JZLP"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::DI" RefVersion="1"/>
+				</ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarStatusSynt</FunctionName><FunctionDes>接收作为子对象的变量的值变化事件（只关心状态变化）,执行有关数据质量的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TXZT</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YALI</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TYXC</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TYCW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>P1CW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>P2CW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>DCCW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>I2CC</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>NSAC</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PMIN</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JPCW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BUSL</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BUSR</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CBCW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JJTJ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BSWX</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>STOP</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>MJAQ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YCCW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TLKQ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TLJZ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZDCK</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZDCG</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>KQSH</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>KQBH</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BYKQ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BYJZ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>HLKQ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>HLQJ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>DYKQ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>DYJZ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BPTL</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZYKQ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZYJZ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZMG</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZPW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZTD</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZII</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZOI</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZXI</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZXO</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZZC</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PWKQ</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZSS</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZHW</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZXL</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZGT</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZGB</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZBP</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZFB</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZLP</SubObjectName><OutEventRef>ValueChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象的值变化事件和该接收事件的回调关系</comment></OnEvent>
+<OnEvent ReDefine="ReDefine"><FunctionName>VarAlarmSynt</FunctionName><FunctionDes>接收作为子对象的变量所组合的报警点的报警状态变化事件,执行有关报警的统计操作</FunctionDes><EventInputList>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TXZT.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YALI.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TYXC.limitAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TYCW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>P1CW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>P2CW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>DCCW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>I2CC.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>NSAC.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PMIN.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JPCW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BUSL.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BUSR.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>CBCW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JJTJ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BSWX.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>STOP.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>MJAQ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>YCCW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TLKQ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>TLJZ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZDCK.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZDCG.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>KQSH.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>KQBH.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BYKQ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BYJZ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>HLKQ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>HLQJ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>DYKQ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>DYJZ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>BPTL.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZYKQ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>ZYJZ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZMG.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZPW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZTD.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZII.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZOI.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZXI.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZXO.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZZC.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>PWKQ.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZSS.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZHW.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZXL.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZGT.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZGB.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZBP.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZFB.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput>
+<SubObjectEventInput Templet="Templet"><SubObjectName>JZLP.cosAlarm</SubObjectName><OutEventRef>AlarmStatusChanged</OutEventRef><Impact>类级</Impact></SubObjectEventInput></EventInputList><TimerInputList/><EventProcessMode>同步</EventProcessMode><comment>对于设备类派生类，会自动建立相应子对象所组合的报警点的报警状态变化事件和该接收事件的回调关系</comment></OnEvent></ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1414978300</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

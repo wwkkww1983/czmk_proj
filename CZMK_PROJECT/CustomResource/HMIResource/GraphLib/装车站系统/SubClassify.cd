@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<MxvGlXmlClassifyFile CreateDate="2012-10-23" Creator="系统自动生成" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MxvGlXmlClassify Name="静态图符">
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>套管</Name>
+		</MxvGlXmlClassifyLibObj>
+	</MxvGlXmlClassify>
+	<MxvGlXmlClassify Name="动态图符"><MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>泵</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>冷却风扇</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>循环油泵（动态）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>干油泵（动态）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>油泵温度（动态）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>电磁阀（动态）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>装车闸门（动态）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>缓冲仓（对象）3-8</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>缓冲仓12</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>溜槽加热器</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>溜槽新（动态）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装车站概览图（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>温度值（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>仓位（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>压力电流（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装煤量（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装车节数（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>油箱温度（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>原煤仓（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>配煤方式（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装车当前状态（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>D01柜状态（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>401皮带（动态）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>油箱压力（动态）</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify><MxvGlXmlClassify Name="对象图符"><MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>油泵</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>油泵温度（对象图符）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>电磁阀（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>电磁阀2（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>缓冲仓3-8</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>缓冲仓（对象）12</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>装车闸门（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>干油泵（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>循环油泵（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>冷却风扇（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>溜槽（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>装车闸门2（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj>
+			<BelongLib>用户图库</BelongLib>
+			<SubDirName>装车站系统</SubDirName>
+			<Name>溜槽加热器（对象）</Name>
+		</MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装车站概览图（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>油泵温度（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>油箱温度（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>油箱压力（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>仓位（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>进线柜D1(对象)</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装煤量（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装车节数（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>油箱温度new（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>原煤仓（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>配煤方式（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>装车当前状态（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>D01柜状态（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>401皮带（对象）</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>装车站系统</SubDirName><Name>干油泵new（对象）</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify></MxvGlXmlClassifyFile>

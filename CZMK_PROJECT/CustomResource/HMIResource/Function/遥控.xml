@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MXVFunc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FuncInfo><Name>RCDevStatus</Name><Definition>RCDevStatus(ialarmStatus,ilocalRemote,ioutputCtrlVar)</Definition><ReturnType>1</ReturnType><UsedInVBS>true</UsedInVBS><Description>此函数的结果为10则允许遥控操作设备，结果为0则不允许遥控操作设备，结果为9说明正在遥控操作设备</Description><HelpIndex></HelpIndex><Body>Function RCDevStatus(alarmStatus,localRemote,outputCtrlVar)
+a = alarmStatus &lt;&gt; 1 And alarmStatus &lt;&gt; 2 And localRemote '设备没有故障并且在遥控位置则结果为1，否则结果为0
+a = a * 10
+b = outputCtrlVar &lt;&gt; 0'如果设备已经被遥控则结果为1
+a = a + b
+RCDevStatus = a
+
+End Function</Body></FuncInfo><FuncInfo><Name>SwitchClose</Name><Definition>SwitchClose(iexecStatus,iposValue,icloseValue,iopenValue,iopReturnZero,iopReturnOne)</Definition><ReturnType>3</ReturnType><UsedInVBS>true</UsedInVBS><Description>此函数返回合闸按钮的状态True为抬起False为按下</Description><HelpIndex></HelpIndex><Body>Function SwitchClose(execStatus,posValue,closeValue,openValue,opReturnZero,opReturnOne)
+    If execStatus &lt;= 2 Then '返校成功之前,合闸按钮状态为弹起
+       SwitchClose = True
+    ElseIf posValue = opReturnOne And (execStatus = 3 or execStatus = 5) Then '开关在合位，并且处于预置命令成功状态或者脉冲收回后的返信判断状态时按钮状态为弹起
+        SwitchClose = True
+    ElseIf posValue = opReturnOne And execStatus = 4 And  closeValue =0 And openValue =0 Then '开关在合位，处于命令成功发送状态，FEP中的open值为1，但来不及刷新采集open值时按钮状态为弹起
+        SwitchClose = True
+    ElseIf openValue = 1 And closeValue = 0 then '分闸脉冲为真期间,合闸按钮状态为弹起
+        SwitchClose = True
+    Else
+        SwitchClose = False '合闸按钮状态为按下
+    End If
+End Function</Body></FuncInfo><FuncInfo><Name>SwitchOpen</Name><Definition>SwitchOpen(iexecStatus,iposValue,icloseValue,iopenValue,iopReturnZero,iopReturnOne)</Definition><ReturnType>3</ReturnType><UsedInVBS>true</UsedInVBS><Description>此函数控制分闸按钮的状态,True为抬起,False为按下</Description><HelpIndex></HelpIndex><Body>Function SwitchOpen(execStatus,posValue,closeValue,openValue,opReturnZero,opReturnOne)
+    If execStatus &lt;= 2 Then '返校成功之前,分闸按钮状态为弹起
+        SwitchOpen = True
+    ElseIf posValue = opReturnZero And (execStatus = 3 or execStatus = 5) Then '开关在分位，并且处于预置命令成功状态或者脉冲收回后的返信判断状态时按钮状态为弹起
+        SwitchOpen = True
+    ElseIf posValue = opReturnZero And execStatus = 4 And  closeValue =0 And openValue =0 Then '开关在分位，处于命令成功发送状态，FEP中的close值为1，但来不及刷新采集close值时按钮状态为弹起
+        SwitchOpen = True
+    ElseIf closeValue = 1 And openValue = 0 Then '合闸脉冲为真期间,分闸按钮状态为弹起
+        SwitchOpen = True
+    Else
+         SwitchOpen = False '分闸按钮状态为按下
+    End If
+End Function</Body></FuncInfo></MXVFunc>

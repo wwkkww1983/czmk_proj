@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:attributeGroup name="ID_Attr">
+		<xs:annotation>
+			<xs:documentation>标识属性</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Name" type="IDNameType" use="required"/>
+		<xs:attribute name="Des" type="xs:string" use="required"/>
+		<xs:attribute name="Creater" type="IDNameType" use="required"/>
+		<xs:attribute name="CreatDate" type="xs:string" use="required"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="IDNameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\S^:/\\]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

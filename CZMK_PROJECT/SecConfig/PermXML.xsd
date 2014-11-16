@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="PermDef.xsd"/>
+	<xs:include schemaLocation="PermProject.xsd"/>
+	<xs:include schemaLocation="PubLicDef.xsd"/>
+	<xs:include schemaLocation="RoleDef.xsd"/>
+	<xs:include schemaLocation="UADef.xsd"/>
+	<xs:include schemaLocation="UserDef.xsd"/>
+	<xs:include schemaLocation="PADef.xsd"/>
+	<xs:include schemaLocation="PermOnlineOprDef.xsd"/>
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MXVFunc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FuncInfo><Name>GetUPPosition</Name><Definition>GetUPPosition(ielsup,ielsdn,ielsstop)</Definition><ReturnType>1</ReturnType><UsedInVBS>true</UsedInVBS><Description>扶梯上行</Description><HelpIndex></HelpIndex><Body>Function GetUPPosition(elsup,elsdn,elsstop)
+if elsup = 1 and elsdn = 0 and elsstop = 0 then
+   upposition = Second(Time) mod 10
+   GetUPPosition = upposition
+else
+   GetUPPosition = 0
+end if
+
+End Function</Body></FuncInfo><FuncInfo><Name>GetDNPosition</Name><Definition>GetDNPosition(ielsup,ielsdn,ielsstop)</Definition><ReturnType>1</ReturnType><UsedInVBS>true</UsedInVBS><Description>扶梯下行</Description><HelpIndex></HelpIndex><Body>Function GetDNPosition(elsup,elsdn,elsstop)
+if elsup = 0 and elsdn = 1 and elsstop = 0 then
+   dnposition = Second(Time) mod 10
+   GetDNPosition = dnposition
+else
+   GetDNPosition = 0
+end if
+End Function</Body></FuncInfo></MXVFunc>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NodeInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><IDGroup><ID>1032</ID><TagName>OCC_FEP3</TagName><Description></Description><Version>0</Version><Name>OCC_FEP3</Name></IDGroup><SoftwareCfg><FEP>true</FEP><HMI>false</HMI><RTDB>false</RTDB><CACL>false</CACL><HDB>false</HDB><EVENT>false</EVENT></SoftwareCfg><Computer><ComputerName>CZMK_FEP31</ComputerName><IP_A>168.168.161.7</IP_A><IP_B></IP_B></Computer><Computer><ComputerName>CZMK_FEP32</ComputerName><IP_A>168.168.161.8</IP_A><IP_B></IP_B></Computer></NodeInfo>
