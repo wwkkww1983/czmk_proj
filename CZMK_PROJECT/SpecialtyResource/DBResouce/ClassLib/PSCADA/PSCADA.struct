@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GB2312"?>
+<CommonStructSet SchemaVersion="20050920" CreateDate="2006-03-28" Creator="LIZHIJUN">
+	<StrucSetID Name="StrucSet" TagName="公共结构" Description=""/>
+	<StructSetVersion>1300437245</StructSetVersion>
+	<comment/>
+	<StructList>
+	</StructList>
+</CommonStructSet>

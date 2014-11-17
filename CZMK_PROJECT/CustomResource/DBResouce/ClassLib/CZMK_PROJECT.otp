@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassLibProject SchemaVersion="20050920">
+	<ProjectName>CZMK_PROJECT</ProjectName>
+	<Creator>CZMK_ENG</Creator>
+	<CreateTime>2014-07-28 13:31:30</CreateTime>
+	<ProjectID>1406525490</ProjectID>
+	<Des/>
+	<BaseLib>基础类库</BaseLib><Userlib>CZMK_FSX</Userlib><Userlib>CZMK_JFJ</Userlib><Userlib>CZMK_YSX</Userlib><Userlib>CZMK_POW</Userlib><Userlib>CZMK_ZCX</Userlib><Userlib>CZMK_JSX</Userlib></ClassLibProject>

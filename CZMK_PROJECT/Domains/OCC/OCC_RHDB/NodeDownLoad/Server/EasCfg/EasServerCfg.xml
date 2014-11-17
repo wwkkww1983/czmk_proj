@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EASServerCfg xsi:noNamespaceSchemaLocation="EASCfgMgr_ConfigDll.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SaveLocalLog>true</SaveLocalLog><ServerSyncCfg><SyncNodeNum>0</SyncNodeNum></ServerSyncCfg><PeriodProcessorsCfg><PeriodProcessor><ProcessorName>EasProcessorAutoAck</ProcessorName><ProcessorParam>86400</ProcessorParam></PeriodProcessor><PeriodProcessorNum>1</PeriodProcessorNum></PeriodProcessorsCfg></EASServerCfg>

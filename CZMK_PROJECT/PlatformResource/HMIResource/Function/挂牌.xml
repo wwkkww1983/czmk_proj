@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MXVFunc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FuncInfo><Name>HangOpInfo</Name><Definition>HangOpInfo(inComStatus,inComValue,inTruckPos)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function HangOpInfo(nComStatus,nComValue,nTruckPos)
+If nComStatus = nComValue Then
+    HangOpInfo = "设备通讯故障"
+ElseIf nTruckPos = 1 Then
+    HangOpInfo = "手车位置不在试验位"
+Else
+    HangOpInfo = "可以挂摘牌"
+End If
+End Function</Body></FuncInfo></MXVFunc>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MXVFunc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FuncInfo><Name>PFTimeSpan</Name><Definition>PFTimeSpan(iintTimeCnt)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function PFTimeSpan(intTimeCnt)
+If intTimeCnt &lt; 1 Or intTimeCnt &gt; 96 Then
+    PFTimeSpan = "00:00 ~ 00:00"
+
+    Exit Function
+End If
+
+
+Select Case intTimeCnt Mod 4
+    Case 1
+        strBgn = ":00"
+        strEnd = ":14"
+    Case 2
+        strBgn = ":15"
+        strEnd = ":29"
+    Case 3
+        strBgn = ":30"
+        strEnd = ":44"
+    Case 0
+        strBgn = ":45"
+        strEnd = ":59"
+End Select
+
+strHor = Round((intTimeCnt - 1) / 4 - 0.5)
+strHor = Right("00" &amp; strHor, 2)
+strBgn = strHor &amp; strBgn
+strEnd = strHor &amp; strEnd
+
+PFTimeSpan = strBgn &amp; " ~ " &amp; strEnd
+End Function</Body></FuncInfo></MXVFunc>

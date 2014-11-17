@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><PADef Version="1173767453" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><PA RoleName="管理员"><Permission OprGlbName="工程管理::AllOpr"><ObjGlbName>工程管理::AllType[]</ObjGlbName></Permission></PA></PADef>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<GlobalPlugInSet xsi:noNamespaceSchemaLocation="..\..\..\PublicProject\debug\bin\CEConfig\OORTDBXML.xsd" SchemaVersion="20050920" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PlugInSetID Name="PlugInSet" TagName="类库插件" Description="基础类库插件函数"/>
+	<comment/>
+	<PlugInSetInfo>
+		<Dll>GlobalEventFunction</Dll>
+	</PlugInSetInfo>
+	<PlugInSetVersion>1228207072</PlugInSetVersion>
+	<PlugInList>
+		<PlugIn>
+			<FunctionName>DataChanged_Push</FunctionName><FunctionDes>接收DI的ValueChanged和ALMD的AlarmStatusChanged，将变化数据推送到数据库副本</FunctionDes>
+			<PlugInEventInputList>
+				<RelationClassEventInput>
+					<Impact>类级</Impact>
+					<ClassRef RefVersion="1" GlobalName="ALMD"/>
+					<OutEventRef>AlarmStatusChanged</OutEventRef>
+				</RelationClassEventInput>
+				<RelationClassEventInput>
+					<Impact>类级</Impact>
+					<ClassRef RefVersion="1" GlobalName="DI"/>
+					<OutEventRef>ValueChanged</OutEventRef>
+				</RelationClassEventInput>
+			</PlugInEventInputList>
+			<PlugInTimerInputList/>
+			<EventProcessMode>异步</EventProcessMode>
+			<comment/>
+			<PlugInVersion>1228207072</PlugInVersion>
+		</PlugIn>
+	</PlugInList>
+</GlobalPlugInSet>

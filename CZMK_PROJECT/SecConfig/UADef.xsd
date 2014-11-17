@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="PublicDef.xsd"/>
+	<xs:element name="UADef">
+		<xs:annotation>
+			<xs:documentation>用户角色分配定义文件跟元素</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="GRAList">
+					<xs:annotation>
+						<xs:documentation>用户组角色列表</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="GRA" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="URAList">
+					<xs:annotation>
+						<xs:documentation>用户角色分配列表</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="URA" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:positiveInteger" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="URA">
+		<xs:annotation>
+			<xs:documentation>用户角色分配</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UARole" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="UserName" type="IDNameType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GRA">
+		<xs:annotation>
+			<xs:documentation>用户组角色分配</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="GARoleName" type="IDNameType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="GARoleGroupName" type="IDNameType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="GroupGlbName" type="IDNameType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UARole">
+		<xs:annotation>
+			<xs:documentation>为用户分配的角色</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="RoleName" type="IDNameType" use="required"/>
+			<xs:attribute name="UGroupGlbName" type="IDNameType" use="required">
+				<xs:annotation>
+					<xs:documentation>为用户分配的该角色所在的用户组全局名</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

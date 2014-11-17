@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312"?>
+<GlobalPlugInSet CreateDate="2006-03-28" SchemaVersion="20050920" Creator="LIZHIJUN">
+	<PlugInSetID Name="PlugInSet" TagName="类库插件" Description=""/>
+	<comment/>
+	<PlugInSetInfo>
+		<Dll>PSCADA_Plugin</Dll>
+	</PlugInSetInfo>
+	<PlugInSetVersion>1243835129</PlugInSetVersion>
+	<PlugInList>
+	</PlugInList>
+</GlobalPlugInSet>

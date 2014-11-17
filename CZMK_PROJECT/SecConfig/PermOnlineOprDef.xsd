@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="PublicDef.xsd"/>
+	<xs:element name="PermOnlineOpr">
+		<xs:annotation>
+			<xs:documentation>在线操作</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PermOnlineOprPar" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>操作的参数，有顺序</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="ID_Attr"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PermOnlineOprList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PermOnlineOpr" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="Version" type="xs:positiveInteger" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

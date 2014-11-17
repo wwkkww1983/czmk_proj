@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassLib SchemaVersion="20050920">
+	<LibName>CZMK_JFJ</LibName><NameSpace>CZMKJFJ</NameSpace><LibType>自定义类库</LibType><Creator>ZHANGXIN</Creator><CreateTime>2014-07-29 10:47:50</CreateTime><Version>1406613129</Version>
+	<Des>成庄煤矿局部风机</Des><GlobalPlugFile>CZMK_JFJ.plugin</GlobalPlugFile><CommonParamFile>CZMK_JFJ.param</CommonParamFile><CommonStructFile>CZMK_JFJ.struct</CommonStructFile><UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>CZMK_JFJ</ClassFamily></ClassLib>

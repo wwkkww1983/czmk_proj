@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MXVFunc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FuncInfo><Name>GetCtrlDes</Name><Definition>GetCtrlDes(inStartCtrl,inStopCtrl)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetCtrlDes(nStartCtrl,nStopCtrl)
+if nStartCtrl=1 then
+	GetCtrlDes="停止"
+elseif nStopCtrl=1 then
+	GetCtrlDes="启动"
+else GetCtrlDes="未知"
+end if
+End Function</Body></FuncInfo><FuncInfo><Name>GetCtrlDesA</Name><Definition>GetCtrlDesA(inStartCtrlA)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetCtrlDesA(nStartCtrlA)
+if nStartCtrlA=1 then
+	GetCtrlDesA="1号泵停止"
+elseif nStartCtrlA=0 then
+	GetCtrlDesA="1号泵启动"
+else
+	GetCtrlDesA="未知状态"
+end if
+End Function</Body></FuncInfo><FuncInfo><Name>GetCtrlDesB</Name><Definition>GetCtrlDesB(inStartCtrlB)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetCtrlDesB(nStartCtrlB)
+if nStartCtrlB=1 then
+	GetCtrlDesB="1号泵停止"
+elseif nStartCtrlB=0 then
+	GetCtrlDesB="1号泵启动"
+else
+	GetCtrlDesB="未知状态"
+end if
+End Function</Body></FuncInfo><FuncInfo><Name>GetCtrlDesC</Name><Definition>GetCtrlDesC(inOpenCtrl,inCloseCtrl)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetCtrlDesC(nOpenCtrl,nCloseCtrl)
+if nOpenCtrl = 1 then
+	GetCtrlDesC="关闭"
+elseif nCloseCtrl = 1 then
+	GetCtrlDesC="开启"
+else
+	GetCtrlDesC="未知状态"
+end if
+End Function</Body></FuncInfo><FuncInfo><Name>GetCtrlDesD</Name><Definition>GetCtrlDesD(inOpenSta,inCloseSta)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetCtrlDesD(nOpenSta,nCloseSta)
+if nOpenSta=1 then
+	GetCtrlDesD="关闭"
+elseif nCloseSta=1 then
+	GetCtrlDesD="启动"
+else
+	GetCtrlDesD="未知状态"
+end if
+End Function</Body></FuncInfo><FuncInfo><Name>GetCtrlDesE</Name><Definition>GetCtrlDesE(inRunSta,inStopSta)</Definition><ReturnType>4</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function GetCtrlDesE(nRunSta,nStopSta)
+if nRunSta=1 then
+	GetCtrlDesE="停止"
+elseif nStopSta=1 then
+	GetCtrlDesE="运行"
+else
+	GetCtrlDesE="未知状态"
+end if
+End Function</Body></FuncInfo></MXVFunc>

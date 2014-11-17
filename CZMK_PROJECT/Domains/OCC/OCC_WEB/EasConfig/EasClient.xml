@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EASClientProxyCfg xsi:noNamespaceSchemaLocation="EASCfgMgr_ConfigDll.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><EasClientName>OCC_WEB_Client</EasClientName><ClientSyncCfg><SyncNodeNum>0</SyncNodeNum><SyncNode><ID>1</ID><SyncNodeName>新事件源</SyncNodeName><DomainName>OCC</DomainName><NodeName>OCC_RHDB</NodeName></SyncNode></ClientSyncCfg><ViewsCfg><ViewConfigNum>0</ViewConfigNum><ViewConfig><ID>1</ID><ViewName>新视图</ViewName></ViewConfig></ViewsCfg></EASClientProxyCfg>

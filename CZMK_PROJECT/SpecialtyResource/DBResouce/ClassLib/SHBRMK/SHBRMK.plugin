@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<GlobalPlugInSet CreateDate="2011-10-27" SchemaVersion="20050920" Creator="ZHANGZHAOFENG">
+	<PlugInSetID Name="PlugInSet" TagName="类库插件" Description=""/>
+	<comment/>
+	<PlugInSetInfo>
+		<Dll>ddd</Dll>
+	</PlugInSetInfo>
+	<PlugInSetVersion>1</PlugInSetVersion>
+	<PlugInList/>
+</GlobalPlugInSet>

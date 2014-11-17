@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Version/><DetailFilePath/><TreeItemInfo><TitleText>报警级</TitleText><TreeLeafItem><ItemImageIndex>16</ItemImageIndex><ItemSelectedImageIndex>17</ItemSelectedImageIndex><ItemType>Alarm</ItemType><TitleText>MXVLevelCfg</TitleText><VariableName>ResAlarmClassLeaf</VariableName></TreeLeafItem></TreeItemInfo></XMLTree>

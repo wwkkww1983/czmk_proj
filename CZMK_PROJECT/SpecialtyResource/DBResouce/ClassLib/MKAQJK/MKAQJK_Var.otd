@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassFamily SchemaVersion="20050920" CreateDate="2012-06-20" Creator="MAFEI">
+	<ClassFamilyName>MKAQJK_Var</ClassFamilyName><Des>煤矿安全监控变量类家族</Des>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>MKAQJK_Var</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1340154606</ClassFamilyVersion>
+	<comment>煤矿安全监控变量类家族</comment>
+	<ClassList><Class CreateDate="2012-06-20" Creator="MAFEI"><ClassID Description="模拟量测点" Name="AQJK_AI" TagName="AQJK_AI" GlobalName="MKAQJK_AQJK_AI"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::AI" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1340154381</ClassVersion>
+			<comment>模拟量测点</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1</ClassPropertyVersion>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-06-20" Creator="MAFEI"><ClassID Description="开关量测点" Name="AQJK_DI" TagName="开关量测点" GlobalName="MKAQJK_AQJK_DI"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::DI" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1340154480</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1</ClassPropertyVersion>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2012-06-20" Creator="MAFEI"><ClassID Description="多态量测点" Name="AQJK_VI" TagName="多态量测点" GlobalName="MKAQJK_AQJK_VI"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::VI" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1340154606</ClassVersion>
+			<comment>多态量测点</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1</ClassPropertyVersion>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

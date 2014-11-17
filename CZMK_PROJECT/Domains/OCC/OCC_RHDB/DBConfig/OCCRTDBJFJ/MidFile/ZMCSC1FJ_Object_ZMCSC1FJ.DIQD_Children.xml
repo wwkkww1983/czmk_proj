@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColWidth xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Col Name="POINT:name" Width="40"/><Col Name="关联模板" Width="70"/><Col Name="类描述" Width="55"/><Col Name="所属类" Width="55"/><Col Name="子对象名" Width="70"/><Col Name="ALMD:alarmLevel" Width="55"/><Col Name="ALMD:alarmRequire" Width="70"/><Col Name="POINT:label" Width="55"/><Col Name="POINT:pid" Width="0"/></ColWidth>

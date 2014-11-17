@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<PermDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PermDef.xsd" NameSpace="操作站在线">
+	<ObjTypeDef>
+		<ObjType Name="HMI节点" CreatDate="2007-04-05" Des="配置了HMI的节点" Creater="洪志兵">
+			<InputObjName/>
+		</ObjType>
+		<ObjType Name="图形管理单元" CreatDate="2007-04-05" Des="图形管理单元" Creater="洪志兵">
+			<InputObjName/>
+		</ObjType>
+		<ObjType Name="图形" CreatDate="2007-04-05" Des="图形" Creater="洪志兵">
+			<InputObjName/>
+		</ObjType>
+		<ObjType Name="系统资源" CreatDate="2007-04-05" Des="系统资源" Creater="智艳利">
+			<InputObjName/>
+		</ObjType>
+	</ObjTypeDef>
+	<OprDef>
+		<Operation Name="禁止查看" CreatDate="2007-04-05" Des="禁止查看" Creater="李长俊">
+			<ObjTypeRef>
+				<AllType/>
+			</ObjTypeRef>
+		</Operation>
+		<Operation Name="操作" CreatDate="2007-04-05" Des="操作" Creater="洪志兵">
+			<ObjTypeRef>
+				<AllType/>
+			</ObjTypeRef>
+		</Operation>
+		<Operation Name="登录" CreatDate="2007-04-05" Des="登录" Creater="洪志兵">
+			<ObjTypeRef>
+				<ObjTypeName>HMI节点</ObjTypeName>
+			</ObjTypeRef>
+		</Operation>
+		<Operation Name="使用系统资源" CreatDate="2007-04-05" Des="使用系统资源" Creater="洪志兵">
+			<ObjTypeRef>
+				<ObjTypeName>系统资源</ObjTypeName>
+			</ObjTypeRef>
+		</Operation>
+	</OprDef>
+</PermDef>

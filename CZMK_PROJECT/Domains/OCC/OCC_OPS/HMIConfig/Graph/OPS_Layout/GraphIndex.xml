@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Version><MajorVersion>1</MajorVersion>
+		<MinorVersion>0</MinorVersion>
+	</Version><DetailFilePath/><TreeItemInfo><TitleText>图形</TitleText><TreeLeafItem><ItemImageIndex>10</ItemImageIndex><ItemSelectedImageIndex>11</ItemSelectedImageIndex><ItemType>Graph</ItemType><TitleText>OPS_TOP1</TitleText><VariableName>GraphBuildTime1416136808</VariableName></TreeLeafItem><TreeLeafItem><ItemImageIndex>10</ItemImageIndex><ItemSelectedImageIndex>11</ItemSelectedImageIndex><ItemType>Graph</ItemType><TitleText>OPS_DOW1</TitleText><VariableName>GraphBuildTime1416136809</VariableName></TreeLeafItem></TreeItemInfo></XMLTree>

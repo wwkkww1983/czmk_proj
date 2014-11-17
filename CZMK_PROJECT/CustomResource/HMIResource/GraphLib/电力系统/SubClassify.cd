@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MxvGlXmlClassifyFile CreateDate="2014-11-06" Creator="系统自动生成" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MxvGlXmlClassify Name="动态图符"><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_断路器</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_小车断路器</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_N11B参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_TBDJ参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_YKDY参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z11B参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z11C参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z1CQ参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z1DJ参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z1PB参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_ZPBN参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z842参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z861参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z871参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_ZB11参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_BDDY参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_Z842保护</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_动力变</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_动力变2</Name></MxvGlXmlClassifyLibObj><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DT_低压开关</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify><MxvGlXmlClassify Name="对象图符"><MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_断路器</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_小车断路器</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_N11B参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_TBDJ参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_YKDY参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z11B参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z11C参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z1CQ参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z1DJ参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z1PB参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_ZPBN参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z842参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z861参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z871参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_ZB11参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_BDDY参数</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_Z842保护</Name></MxvGlXmlClassifyLibObj>
+		<MxvGlXmlClassifyLibObj><BelongLib>用户图库</BelongLib><SubDirName>电力系统</SubDirName><Name>DX_低压开关</Name></MxvGlXmlClassifyLibObj></MxvGlXmlClassify></MxvGlXmlClassifyFile>

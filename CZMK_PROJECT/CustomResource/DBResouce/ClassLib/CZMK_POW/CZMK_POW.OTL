@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassLib SchemaVersion="20050920">
+	<LibName>CZMK_POW</LibName><NameSpace>CZMKPOW</NameSpace><LibType>自定义类库</LibType><Creator>PC-20140922DQJN</Creator><CreateTime>2014-09-22 18:23:21</CreateTime><Version>1413186215</Version>
+	<Des>成庄煤矿电力系统</Des><GlobalPlugFile>CZMK_POW.plugin</GlobalPlugFile><CommonParamFile>CZMK_POW.param</CommonParamFile><CommonStructFile>CZMK_POW.struct</CommonStructFile><UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>CZMK_POW</ClassFamily></ClassLib>

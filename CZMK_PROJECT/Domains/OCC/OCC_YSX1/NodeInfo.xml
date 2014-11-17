@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NodeInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><IDGroup><ID>1014</ID><TagName>OCC_YSX1</TagName><Name>OCC_YSX1</Name><Description></Description><Version>0</Version></IDGroup><Computer><ComputerName>CZMK_YSX1</ComputerName><IP_A>168.168.161.14</IP_A><IP_B></IP_B></Computer><Computer><ComputerName></ComputerName><IP_A></IP_A><IP_B></IP_B></Computer><SoftwareCfg><HMI>true</HMI><RTDB>false</RTDB><CACL>false</CACL><HDB>false</HDB><EVENT>false</EVENT><FEP>false</FEP></SoftwareCfg></NodeInfo>

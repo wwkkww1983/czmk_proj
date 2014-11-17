@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<ClassFamily SchemaVersion="20050920" CreateDate="2010-04-08" Creator="谢文虎">
+	<ClassFamilyName>联动</ClassFamilyName>
+	<Des/>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>Linkage</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1289823862</ClassFamilyVersion>
+	<comment/>
+	<ClassList>
+		<Class CreateDate="2010-04-08" Creator="谢文虎">
+			<ClassID Description="包括全自动、半自动、时间触发的联动功能" TagName="联动" Name="Linkage" GlobalName="AppPubBase_Linkage"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="Tran_Variable_Ctrl" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1288850486</ClassVersion>
+			<comment>与基类的区别：转发操作被分为两个阶段：判断执行条件和执行控制脚本。
+在半自动联动情况下：
+当触发点或者是定时器、初始触发等条件触动联动，则会执行触发脚本，如果脚本执行结果返回非0（或者脚本为空），则启动执行条件判断线程；当满足以下情况时则执行控制脚本：manual变为1（手动执行）或者超时并且超时后行为为执行；在执行条件判断的过程中，如果触发条件消失（执行触发脚本返回0）或者用户选择不执行或者超时且超时后行为为消失，则终止执行条件判断线程，取消整个联动过程。
+在全自动联动情况下：
+与基类的区别，在于需要判断触发脚本的返回结果来决定是否执行控制脚本。</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1288850486</ClassPropertyVersion>
+				<ClassProperty>
+					<ClassPropertyID Description="全自动、半自动或手动" Name="triggerType" TagName="触发类型"/>
+					<comment>如果为全自动联动，则本类的有些参数/功能会无效；
+如果为手动，则大部分参数会无效。
+具体见各参数/功能说明。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT8</TypeName>
+						<Default>1</Default>
+						<Min/>
+						<Max/>
+						<Enum>
+							<EnumItem Value="0" TagValue="全自动"/>
+							<EnumItem Value="1" TagValue="半自动"/>
+							<EnumItem Value="2" TagValue="手动"/></Enum>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="根据输入的源变量数据进行运算，根据运算结果对active置值。运算结果转换为整型，非0则active为1。&#xA;如果触发脚本为空，表示源变量值只要有变化就触发联动。" Name="triggerTcl" TagName="触发脚本"/>
+					<comment>脚本的编写参见ctrlTcl</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>STRING1024</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="在半自动联动时，等待用户动作的超时时间。单位：秒。" Name="timeouts" TagName="超时设定"/>
+					<comment>&lt;=0：无超时；
+&gt;0：秒数，在此时间内等待用户动作。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT32</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="在半自动联动时，等待用户动作超时后，将如何处理联动。" Name="actionTimeout" TagName="超时后行为"/>
+					<comment>消失：超时后联动功能自动消失；
+执行：超时后自动执行联动功能。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>LOGICAL</TypeName>
+						<Default>0</Default>
+						<Min/>
+						<Max/>
+						<Enum>
+							<EnumItem Value="0" TagValue="消失"/>
+							<EnumItem Value="1" TagValue="执行"/>
+						</Enum>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="当前联动功能是否被触发而处于活动状态，即联动的条件是否都满足了。" Name="active" TagName="活动状态"/>
+					<comment>0：未活动状态；1：活动状态。
+如果是半自动联动，在超时等待用户响应的过程中，如果联动条件不满足，则会恢复为未活动状态，并取消超时等待。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>LOGICAL</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="在半自动联动时，超时时间内，记录用户是否执行联动。" Name="manual" TagName="手动状态"/>
+					<comment>0：初始状态；1：执行；2：不执行</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT8</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="用户自定义，例如：标准联动为0，未使用的自定义联动为-2，已使用的自定义联动为1等等" Name="type" TagName="类型号"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT32</TypeName><Default>0</Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="最近一次触发（满足触发条件）的时间，精确到毫秒" Name="triggerTime" TagName="触发时间"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>TIME</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="在半自动联动时，等待用户动作超时后，并且超时后消失时，执行此脚本。主要用于发送日志信息" Name="timeoutTcl" TagName="超时消失后脚本"/>
+					<comment>脚本的编写参见ctrlTcl</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING256</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList>
+					<OutEvent>
+						<FunctionName>ActiveChanged</FunctionName>
+						<FunctionDes>活动状态发生变化输出事件</FunctionDes>
+						<comment/>
+						<ParamMode>简单参数</ParamMode>
+						<ParamItem>
+							<TransDirection>in</TransDirection>
+							<ParamItemID Name="active" TagName="活动状态" Description="当前联动点的活动状态"/>
+							<ValueType>LOGICAL</ValueType>
+							<comment/>
+						</ParamItem>
+					</OutEvent>
+				</OutEventList>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>Tran_Variable</ClassRef>
+						<FunctionName>ValueChanged</FunctionName>
+						<FuncType>接收事件</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>do_setItem</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1288355858</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class>
+		<Class CreateDate="2010-04-08" Creator="谢文虎">
+			<ClassID Description="对联动状态进行监测" TagName="联动监测" Name="LinkageDetect" GlobalName="AppPubBase_LinkageDetect"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1271233218</ClassVersion>
+			<comment>注意：为防止网络不正常造成监测信息丢失，应该仅监测本节点内的联动状态。
+一个节点或一个数据库单元设置一个监测点，或者依据需求分类型设置若干个监测点。
+在数据库组态工程视图中，双击本类下的“&lt;接收事件&gt;/ActiveChanged/注册 联动::ActiveChanged”，在展开的关联关系视图中，事件源对象名为联动点名，数据库单元名称为联动点所在的数据库单元（如果与本类实例在同一个数据库单元，建议不填），事件处理对象名为本类实例点名。</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1271073444</ClassPropertyVersion>
+				<ClassProperty>
+					<ClassPropertyID Description="统计当前处于触发状态的活动联动的个数" Name="activeCount" TagName="活动联动个数"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>UINT16</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList>
+					<OnEvent>
+						<FunctionName>ActiveChanged</FunctionName>
+						<FunctionDes>接收联动类的触发状态变化事件</FunctionDes>
+						<EventInputList>
+							<RelationClassEventInput>
+								<Impact>实例级</Impact>
+								<ClassRef RefVersion="1" GlobalName="Linkage"/>
+								<OutEventRef>ActiveChanged</OutEventRef>
+							</RelationClassEventInput>
+						</EventInputList>
+						<TimerInputList/>
+						<EventProcessMode>同步</EventProcessMode>
+						<comment>由于仅监测本节点内的联动，且统计算法简单，采用同步触发</comment>
+					</OnEvent>
+				</OnEventList>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1271228231</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class>
+		<Class CreateDate="2010-06-24" Creator="谢文虎">
+			<ClassID Description="广义的顺控为一组命令序列，命令可以是一个单体设备的动作、一个环控模式的启动、一个摄像头的预设位控制、一个CCTV序列的执行、一个PA的编组广播、一条紧急信息的播放以及一个顺控的执行（即支持嵌套调用，注意不要造成死循环）" Name="SOC" TagName="顺控" GlobalName="AppPubBase_SOC"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1289823862</ClassVersion>
+			<comment>为便于tcl脚本的编辑，在本类所有脚本执行之前，预置了下述变量供调用：
+$RunDir——系统运行路径，例如/MACS-SCADA/RunDir；
+$init——0，初始态；
+$running——1，正在执行中；
+$OK——2，执行成功结束；
+$cancel——3，执行过程中取消；
+$continue——4，执行过程中因失败而跳过；
+$break——5，执行过程因失败而中断；
+$wait——6，执行过程中等待用户响应；
+$retry——7，执行失败后重试；
+$unchecked——8，未选中参与和替代标记；
+$skip——9，命令未执行（目标状态已达到）而跳过；
+$SOC——当前顺控对象的全局点名；
+（上面为静态变量，不会发生变化，下面的变量每次执行时都可能不同）
+$user——用户名；
+$type——类型号；
+$cmdListSize——命令列表实际个数；
+$curIndex——正在执行的步骤索引号；
+$cmdObject(i)——命令对象全局点名，i为索引号；
+$cmdRplObject(i)——命令替代对象全局点名，i为索引号。
+例如：macs_WR $cmdObject($curIndex).value 1。
+如何获取数据库命令的返回值，参考脚本：
+set retValue [lindex [split [macs_RD $cmdObject($curIndex).value] @] 1]；
+set retValue [lindex [split [macs_RD $SOC.cmdParList\[0,actionFailed\]] @] 1]。
+
+顺控执行逻辑如下：
+1.用户在界面上选择参与的对象，并调用顺控执行命令；
+2.顺控实例接收到执行命令后，拒绝相关属性的编辑操作（某些特殊属性允许编辑），初始化一些变量和状态，设置顺控状态为$running，执行initTcl后开始执行每一步；
+3.在执行过程中，如果用户取消，则退出（已经发出的命令不能取消）；
+4.如果该步的对象不存在或参与标记和替代标记都未选中，将该步结果置为$直接跳过该步；
+5.设置当前步骤顺控状态为$running，记录当前时间到当前步骤中；
+6.同步调用cmdTcl（在此脚本中进行替代的逻辑判断和发出设备动作命令），脚本执行结果保存到变量$cmdRet中；
+7.同步调用checkTcl（可访问$cmdRet），脚本执行结果保存到变量$checkRet中，依据脚本运算结果转换为整型，进行判断：
+	返回值&gt;0，表示命令执行成功，中止校验；
+	返回值=0，表示命令执行失败，如果仍未超出校验时间，则休眠，继续循环判断，如果超出校验时间，则表示命令执行失败；
+	返回值&lt;0，表示命令执行失败，立即中止校验；
+8.如果校验不成功，则依据actionFailed进行判断：
+	$retry，重试repeatNumFailed次（不含第一次，即最多执行repeatNumFailed+1次），若仍然失败，则continue；
+	$continue，继续执行下一步；
+	$break，中断序列的执行；
+	$wait，等待用户响应，用户可以选择：
+		$retry，再重试1次，若仍然失败，则继续等待用户响应；
+		$continue，继续执行下一步；
+		$break，中断序列的执行；
+9.每步执行结束后（包括中断，不包括取消），同步调用endTcl（可访问$cmdRet和$checkRet）；
+10.在执行下一步骤之前延时；
+11.所有步骤执行结束之后（包括取消），执行finishTcl。
+</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1289823862</ClassPropertyVersion>
+				<ClassProperty>
+					<ClassPropertyID Description="用户自定义，例如：标准顺控为0，自定义未执行为1，自定义已执行为2，特殊的用于执行自定义顺控的历史记录为-1等等" Name="type" TagName="类型号"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT32</TypeName>
+						<Default>0</Default>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="执行顺控开始后立即执行此脚本，同步执行" Name="initTcl" TagName="初始脚本"/>
+					<comment>如果有比较耗时的操作，请在脚本内部调用异步执行脚本命令</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>STRING256</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="命令列表中，需要用户组态/编辑的各项" Name="cmdParList" TagName="命令序列参数列表"/>
+					<comment>要求命令向前紧凑排列，如果某一个命令对象名为空，则后续所有命令无效。其他几个命令列表的个数都以本列表为准。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>50</Size>
+					<ValueType>结构</ValueType>
+					<StructType>
+						<Declaration>true</Declaration>
+						<Struct>
+							<StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_SOC_cmdParList_S"/>
+							<StructVersion>1</StructVersion>
+							<comment>
+							</comment>
+							<StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="object" TagName="对象" Description="当对象与本实例处于同一个数据库单元时，可以是局部的点名（不含数据库单元号）；否则应该使用全局点名（含数据库单元号，形如1202:AIObj00001）；如果点名超出长度，可以使用局部点号或全局点号（局部与全局的区别同上）。程序内部按照局部点名、全局点名、局部点号、全局点号的顺序在数据库中查找，如果点号与其他点名相同则会混淆。"/>
+									<comment/>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="rplObject" TagName="替代对象" Description="与object定义一致"/>
+									<comment/>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="cmdTcl" TagName="命令脚本" Description="同步执行，不判断此脚本运算结果"/>
+									<comment/>
+									<ValueType>STRING1024</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="cmdDes" TagName="命令描述" Description="用于界面显示"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="checkTcl" TagName="校验脚本" Description="同步执行，如果脚本为空，则直接取cmdTcl的返回值，并且不做循环校验，否则将脚本运算结果转换为整型，&gt;0表示成功，=0表示失败后继续校验，&lt;0表示失败后停止校验，要求不能含有延时等耗时操作"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="checkInterval" TagName="校验间隔时间" Description="在校验间隔时间*校验次数内，循环执行校验脚本直到返回值为非0或超时，单位：毫秒，不能小于100ms"/>
+									<comment/>
+									<ValueType>INT16</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="checkCount" TagName="校验次数" Description="不能小于1"/>
+									<comment/>
+									<ValueType>INT16</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="actionFailed" TagName="失败后处理方式" Description="$continue（4），继续执行下一步；&#xA;$retry（7），重试repeatNumFailed次（不含第一次，即最多执行repeatNumFailed+1次），若仍然失败，则continue；&#xA;$break（5），中断序列的执行；&#xA;$wait（6），等待用户响应。"/>
+									<comment/>
+									<ValueType>INT8</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="repeatNumFailed" TagName="失败后重复次数" Description=""/>
+									<comment/>
+									<ValueType>INT8</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="endTcl" TagName="结束脚本" Description="异步执行，不判断此脚本运算结果，每一步骤执行完成（不考虑执行结果），执行下一步骤之前执行此脚本"/>
+									<comment/>
+									<ValueType>STRING256</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="delayTime" TagName="步骤延时" Description="步骤与步骤之间的延时，单位：秒"/>
+									<comment/>
+									<ValueType>INT16</ValueType>
+								</StructProperty>
+							</StructPropertyList>
+						</Struct>
+					</StructType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="执行顺控结束（包括取消、中断）后执行此脚本，同步执行" Name="finishTcl" TagName="结束脚本"/>
+					<comment>如果有比较耗时的操作，请在脚本内部调用异步执行脚本命令</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>STRING256</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="执行顺控命令的用户名，由命令传入" Name="user" TagName="用户"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>STRING256</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="" Name="cmdRealList" TagName="命令序列实时列表"/>
+					<comment>与cmpParList一一对应</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>50</Size>
+					<ValueType>结构</ValueType>
+					<StructType>
+						<Declaration>true</Declaration>
+						<Struct>
+							<StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_SOC_cmdRealList_S"/>
+							<StructVersion>1</StructVersion>
+							<comment>
+							</comment>
+							<StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="fullPName" TagName="全局点名" Description="在cmdParList的object发生变化后，获取其全局点名，如果对象不存在，则为空"/>
+									<comment/>
+									<ValueType>STRING128</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="rplFullPName" TagName="替代点全局点名" Description="在cmdRplList的object发生变化后，获取其全局点名，如果对象不存在，则为空"/>
+									<comment/>
+									<ValueType>STRING128</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="valid" TagName="参与标记" Description="在线运行时设置，程序执行时读取"/>
+									<comment/>
+									<ValueType>LOGICAL</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="replace" TagName="替代标记" Description="在线运行时设置，程序执行时读取"/>
+									<comment/>
+									<ValueType>LOGICAL</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="result" TagName="执行结果" Description="同类属性result"/>
+									<comment/>
+									<ValueType>INT8</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="resultDes" TagName="执行结果描述" Description="在校验脚本中写此项"/>
+									<comment/>
+									<ValueType>STRING128</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="execTime" TagName="开始执行的时刻" Description=""/>
+									<comment/>
+									<ValueType>TIME</ValueType>
+								</StructProperty>
+							</StructPropertyList>
+						</Struct>
+					</StructType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="" Name="cmdListSize" TagName="命令列表实际个数"/>
+					<comment>要求cmdParList向前紧凑排列，如果某一个命令对象名为空，则后续所有命令无效</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT16</TypeName>
+						<Default>0</Default>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="正在执行的步骤索引号，从0开始，-1表示未处于执行状态" Name="curIndex" TagName="正在执行的步骤索引号"/>
+					<comment>命令序列正在执行中，不能响应用户的任何编辑、执行等操作或命令</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT32</TypeName>
+						<Default>-1</Default>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="命令执行过程中，可以修改此项，用来表示取消当前正在执行的顺控" Name="cancel" TagName="取消执行"/>
+					<comment>0: 初始；1：取消执行。执行顺控初始化时，会被初始化为0</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>LOGICAL</TypeName>
+						<Default>0</Default>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="命令执行过程中，可以修改此项。当命令执行失败后，cmdParList中的actionFailed为$wait时，依据此项进行后续处理。界面端依据用户选择，设置此项值。" Name="actionWait" TagName="用户响应后的处理方式"/>
+					<comment>$continue，继续执行下一步；
+$break，中断序列的执行；
+$wait，等待用户响应；
+$retry，执行失败后重试。
+执行顺控初始化时，会被初始化为$wait</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT8</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="序列执行完成后的结果，或者是执行过程中的状态" Name="result" TagName="执行结果"/>
+					<comment>$init，初始态；
+$running，正在执行中；
+$OK，执行成功结束；
+$cancel，执行过程中被取消；
+$continue，执行过程中有被跳过的命令；
+$break，执行过程中断；
+$wait，执行过程中等待用户响应；
+$retry，执行失败后重试。
+执行顺控初始化时，会被初始化为$running</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>INT8</TypeName>
+						<Default>0</Default>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="命令执行过程中，可以修改此项。顺控执行过程中，可以将用户自定义的一些数据保存到此" Name="runData" TagName="运行时数据"/>
+					<comment>如自定义顺控执行时，向关系历史库插入一条记录后得到的序号保存到此，后续每个步骤的执行结果访问此属性得到当前正在执行的顺控序号。
+（因为不能跨步骤之间使用变量，否则多个顺控执行过程中，同时修改变量，则结果不可预期。）</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType>
+						<TypeName>STRING256</TypeName>
+						<Default/>
+						<Min/>
+						<Max/>
+						<Enum/>
+					</BasicType>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="lock" TagName="锁"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="Lock" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty><ClassPropertyID Description="" Name="preTcl" TagName="预置脚本"/>
+					<comment>顺控执行时不执行此脚本，此脚本用于保存一些用于客户端执行的逻辑</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING1024</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command>
+						<FunctionName>Exec</FunctionName>
+						<FunctionDes>执行顺控</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>indexes</Name><Des>指定执行的命令索引</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>多个命令之间以“,”分隔，为空表示已数据库中的参与/替代标记为准</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command>
+						<FunctionName>SQLHDBExeTcl</FunctionName>
+						<FunctionDes>在关系历史库端执行Tcl脚本</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>tcl</Name>
+								<Des>提交给关系历史库的tcl脚本</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>ret</Name>
+								<Des>返回结果</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0，成功；-1，失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command>
+						<FunctionName>Time2LLong</FunctionName>
+						<FunctionDes>字符串时间转换为以毫秒计数的长整型</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>strTime</Name>
+								<Des>字符串时间</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>格式：Y-M-D H:m:s ms（毫秒，可省略）</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long long</Type>
+							<Des>以毫秒计数的长整型，-1：失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command>
+						<FunctionName>LLong2Time</FunctionName>
+						<FunctionDes>以毫秒计数的长整型转换为字符串时间</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nTime</Name>
+								<Des>以毫秒计数的长整型</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>strTime</Name>
+								<Des>字符串时间</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command>
+						<FunctionName>RD_T</FunctionName>
+						<FunctionDes>读时间属性值</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>strItemName</Name>
+								<Des>属性名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>空表示读取服务器当前系统时间</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long long</Type>
+							<Des>以毫秒计数的时间，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>ExecPreTcl</FunctionName><FunctionDes>执行预置脚本</FunctionDes>
+						<comment>与本类中其它脚本属性一样，执行中带有预定义变量（一些特殊的步骤变量除外），正常时的返回值由脚本本身决定</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command></CommandList>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList>
+				</VirtualInterfaceList>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>do_setItem</FunctionName>
+						<FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName>
+						<FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1288357727</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class>
+		<Class CreateDate="2010-07-26" Creator="谢文虎"><ClassID Description="封装加锁、解锁和是否被锁等操作" Name="Lock" TagName="锁" GlobalName="AppPubBase_Lock"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1283320663</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1280125202</ClassPropertyVersion>
+				<ClassProperty>
+					<ClassPropertyID Description="当前锁的唯一标识" Name="lockID" TagName="锁标识"/>
+					<comment>建议规则：“用户名:位置信息:附加信息”，其中位置信息为计算机名，附加信息可以为图形名等</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::SI" RefVersion="1"/>
+				</ClassProperty>
+				<ClassProperty>
+					<ClassPropertyID Description="最近一次被锁定的时间（以秒为单位）。命令执行过程中，可以修改此项" Name="lockTime" TagName="锁定时间"/>
+					<comment>将系统当前时间写入的tcl脚本示例（建议使用Lock命令）：
+macs_WR 4102:SOCObj00001.lockTime.value [expr [lindex [split [AppPubBase_SOC_RD_T] @] 1]/1000]
+</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>子对象</ValueType>
+					<SubObjClassRef GlobalName="::VI" RefVersion="1"/>
+				</ClassProperty>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command>
+						<FunctionName>Lock</FunctionName>
+						<FunctionDes>锁定</FunctionDes>
+						<comment>若输入的锁标识为空，则表示仅更新锁定时间，并返回当前是否有锁；
+若当前锁标识为空，或输入的锁标识与当前锁标识一致，则置锁标识为输入的锁标识，更新锁定时间，并返回成功；
+若输入的超时时间非0，且锁定时间与当前系统时间相差超过超时时间，则重置锁标识为输入的锁标识，更新锁定时间，并返回成功；
+否则返回失败。</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>lockID</Name>
+								<Des>锁标识</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>inout</TransDirection>
+								<comment>返回当前的锁标识</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>timeOuts</Name>
+								<Des>超时时间（以秒为单位）</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>UnLock</FunctionName><FunctionDes>解锁</FunctionDes>
+						<comment>若当前锁标识为空，或输入的锁标识与当前锁标识一致，解锁成功（将当前锁标识置为空）</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>lockID</Name><Des>锁标识</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>inout</TransDirection>
+								<comment>返回当前的锁标识</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败（并不表示被锁住了）</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>IsLocked</FunctionName><FunctionDes>是否锁定</FunctionDes>
+						<comment>若当前锁标识非空，且锁定时间与当前系统时间相差未超过超时时间（若输入的超时时间为0，则表示不判断超时），则表示已被锁定。
+仅用于tcl命令，参数格式为：AppPubBase_Lock_IsLocked &lt;对象名&gt; [锁标识] [超时时间]，若锁标识非空，则表示判断是否被其他人锁定。
+返回格式为：&lt;返回值&gt;@&lt;锁标识&gt;，返回值&lt;0表示错误，=0表示未被锁（依据输入锁标识是否为空，分别表示被他人锁定还是被任何人锁定），=1表示被锁定，锁标识为当前锁标识（不考虑输入的锁标识）</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>lockID</Name><Des>锁标识</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>inout</TransDirection>
+								<comment>返回当前锁标识</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>timeOuts</Name><Des>超时时间（以秒为单位）</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>LocksInfo</FunctionName><FunctionDes>获取多个锁的锁定信息</FunctionDes>
+						<comment>tcl命令参数：AppPubBase_Lock_LocksInfo &lt;锁标识&gt; &lt;超时时间&gt; &lt;锁点名&gt; &lt;锁点名&gt; &lt;锁点名&gt; ……
+返回：&lt;成功与否&gt;@&lt;锁定返回值&gt;\t&lt;锁标识&gt;\t&lt;锁定返回值&gt;\t&lt;锁标识&gt;\t&lt;锁定返回值&gt;\t&lt;锁标识&gt;\t……
+锁定返回值与IsLocked命令的返回值一致；锁标识为当前锁标识（可能为空，与IsLocked命令一致）</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>lockID</Name><Des>锁标识</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>timeOuts</Name><Des>超时时间（以秒为单位）</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>locks</Name><Des>输入的锁对象信息及返回信息</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>inout</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command></CommandList>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList/>
+				<ClassBehaviorVersion>1283320663</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

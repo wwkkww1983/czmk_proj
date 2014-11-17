@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColWidth xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Col Name="POINT:name" Width="150"/><Col Name="关联模板" Width="70"/><Col Name="类描述" Width="55"/><Col Name="所属类" Width="55"/><Col Name="同步源" Width="55"/><Col Name="DI:E0" Width="64"/><Col Name="DI:E1" Width="64"/><Col Name="DI:cosAlarm" Width="70"/><Col Name="DI:cosLog" Width="130"/><Col Name="POINT:label" Width="194"/><Col Name="POINT:pid" Width="0"/><Col Name="Variable:externTag" Width="214"/></ColWidth>

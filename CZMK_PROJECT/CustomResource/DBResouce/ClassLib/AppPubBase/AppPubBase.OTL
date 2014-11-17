@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) --><!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () --><ClassLib SchemaVersion="20050920">
+	<LibName>AppPubBase</LibName><NameSpace>AppPubBase</NameSpace><LibType>专业类库</LibType><Creator>YANGCHUNSHENG</Creator><CreateTime>2009-11-25 16:05:00</CreateTime><Version>1331884145</Version>
+	<Des></Des><GlobalPlugFile>AppPubBase.plugin</GlobalPlugFile><CommonParamFile>AppPubBase.param</CommonParamFile><CommonStructFile>AppPubBase.struct</CommonStructFile><UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>权限移交类家族</ClassFamily><ClassFamily>公共变量</ClassFamily><ClassFamily>联动</ClassFamily><ClassFamily>遥控通用逻辑类家族</ClassFamily></ClassLib>

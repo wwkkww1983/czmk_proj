@@ -1,0 +1,20 @@
+<ClassLib SchemaVersion="20050920">
+	<LibName>PSCADA</LibName>
+	<NameSpace>PSCADA</NameSpace>
+	<LibType>专业类库</LibType>
+	<Creator>LIZHIJUN</Creator>
+	<CreateTime>2006-03-28 15:39:15</CreateTime>
+	<Version>1307925307</Version>
+	<Des>电力SCADA专业的类实现。</Des>
+	<GlobalPlugFile>PSCADA.plugin</GlobalPlugFile>
+	<CommonParamFile>PSCADA.param</CommonParamFile>
+	<CommonStructFile>PSCADA.struct</CommonStructFile>
+	<UserList>
+		<User>
+			<Name/>
+			<Password/>
+			<Purview>Admin</Purview>
+		</User>
+	</UserList>
+	<ClassFamily>公共变量</ClassFamily>
+	<ClassFamily>顺控类家族</ClassFamily></ClassLib>

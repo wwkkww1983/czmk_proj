@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<PermDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PermDef.xsd" NameSpace="操作站组态">
+	<ObjTypeDef>
+		<ObjType Name="HMI节点" CreatDate="2007-04-05" Des="配置了HMI的节点" Creater="洪志兵">
+			<InputObjName/>
+		</ObjType>
+		<ObjType Name="图形管理单元" CreatDate="2007-04-05" Des="图形管理单元" Creater="洪志兵">
+			<InputObjName/>
+		</ObjType>
+		<ObjType Name="资源" CreatDate="2007-04-05" Des="资源" Creater="洪志兵">
+			<InputObjName/>
+		</ObjType>
+		<ObjType Name="图库子目录" CreatDate="2007-04-05" Des="图库子目录" Creater="洪志兵">
+			<InputObjName/>
+		</ObjType>
+	</ObjTypeDef>
+	<OprDef>
+		<Operation Name="编辑" CreatDate="2007-04-05" Des="" Creater="洪志兵">
+			<ObjTypeRef>
+				<AllType/>
+			</ObjTypeRef>
+		</Operation>
+	</OprDef>
+</PermDef>

@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by zhoujin (HollySys) -->
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<ClassFamily SchemaVersion="20050920" CreateDate="2009-11-27" Creator="YANGCHUNSHENG">
+	<ClassFamilyName>公共变量</ClassFamilyName><Des/>
+	<ClassFamilyInfo>
+		<Include>IncludeFile</Include>
+		<DLL>AppPubBase_Common</DLL>
+	</ClassFamilyInfo>
+	<ClassFamilyVersion>1331884145</ClassFamilyVersion>
+	<comment>此类家族中存放各专业共享的变量组件类</comment>
+	<ClassList><Class CreateDate="2009-11-27" Creator="YANGCHUNSHENG"><ClassID Description=" " Name="DO_Ctrl" TagName="有控制逻辑的开关量输出点" GlobalName="AppPubBase_DO_Ctrl"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::DO" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1260943837</ClassVersion>
+			<comment>在DO点的功能基础上增加了开关量输出之前的逻辑判断，以及开关量输出后的日志生成。</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1260943837</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="DO通道输出之前，有哪些逻辑核查，通过tcl脚本指定，tcl脚本返回0表示成功，负数表示失败，正数表示成功，可以使用不同的负数表示不同的失败原因" Name="condition" TagName="输出控制逻辑"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING1024</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="最多支持20个输出控制结果" Name="resultDes" TagName="输出控制逻辑结果描述"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>10</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_DO_Ctrl_resultDes_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="result" TagName="输出控制逻辑计算结果" Description=""/>
+									<comment>输出控制逻辑condition的TCL脚本的执行结果</comment>
+									<ValueType>STRING8</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="des" TagName="结果描述" Description=""/>
+									<comment>result对应的结果描述，此结果描述将被拼写在控制结果日志中。</comment>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="SetChannel与SetChannelPulse命令执行完毕后，是否生成控制日志，日志格式：fullLabel + 成功/失败+ 输出控制逻辑结果描述" Name="ctrlLog" TagName="是否生成控制日志"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>LOGICAL</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::DO</ClassRef>
+						<FunctionName>SetChannel</FunctionName><FuncType>命令</FuncType>
+						<Des>通道输出之前增加输出控制逻辑判断，输出后发送成功失败日志。</Des>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::DO</ClassRef>
+						<FunctionName>SetChannelPulse</FunctionName><FuncType>命令</FuncType>
+						<Des>通道输出之前增加输出控制逻辑判断，输出后发送成功失败日志。</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1259301775</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2009-12-16" Creator="YANGCHUNSHENG"><ClassID Description=" " Name="AO_Ctrl" TagName="有控制逻辑的模拟量输出点" GlobalName="AppPubBase_AO_Ctrl"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::AO" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1260951794</ClassVersion>
+			<comment>在AO点的功能基础上增加了模拟量输出之前的逻辑判断，以及模拟量输出后的日志生成。</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1260951794</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="AO通道输出之前，有哪些逻辑核查，通过tcl脚本指定，tcl脚本返回0表示成功，负数表示失败，正数表示成功，可以使用不同的负数表示不同的失败原因" Name="condition" TagName="输出控制逻辑"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING1024</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="最多支持20个输出控制结果" Name="resultDes" TagName="输出控制逻辑结果描述"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>10</Size>
+					<ValueType>结构</ValueType>
+					<StructType><Declaration>true</Declaration>
+						<Struct><StructID Name="LocalStruct" TagName="自定义结构" Description=" " GlobalName="AppPubBase_AO_Ctrl_resultDes_S"/><StructVersion>1</StructVersion><comment>
+							</comment><StructPropertyList>
+								<StructProperty>
+									<StructPropertyID Name="result" TagName="输出控制逻辑计算结果" Description=""/>
+									<comment>输出控制逻辑condition的TCL脚本的执行结果</comment>
+									<ValueType>STRING8</ValueType>
+								</StructProperty>
+								<StructProperty>
+									<StructPropertyID Name="des" TagName="结果描述" Description=""/>
+									<comment>result对应的结果描述，此结果描述将被拼写在控制结果日志中。</comment>
+									<ValueType>STRING64</ValueType>
+								</StructProperty>
+							</StructPropertyList></Struct></StructType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="SetChannel命令执行完毕后，是否生成控制日志，日志格式：fullLabel + 成功/失败+ 输出控制逻辑结果描述 + 输出值：value" Name="CtrlLog" TagName="是否生成控制日志"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>LOGICAL</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::AO</ClassRef>
+						<FunctionName>SetChannel</FunctionName><FuncType>命令</FuncType>
+						<Des>通道输出之前增加输出控制逻辑判断，输出后发送成功失败日志。</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1260944151</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2009-12-24" Creator="YANGCHUNSHENG"><ClassID Description="Variable类型实例的value值发生变化，通过本类实例，转发到另一个Variable类型实例" Name="Tran_Variable" TagName="变量转发类" GlobalName="AppPubBase_Tran_Variable"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1271230971</ClassVersion>
+			<comment>两个Variable类型实例分别被称为触发点（caller）和目标变量（dstVar）。
+触发点和目标变量可以不同类型的Variable点，系统会自动在不同的数据类型之间进行智能转换（如整型变字符串、字符串变浮点数等，但不支持时间格式）。
+触发点和目标变量可以位于不同的节点，但要求本类实例与目标变量的正本处于同一个节点（不要求是同一个数据库单元），如果触发点在另一个节点，则需要在本节点引用触发点所在的数据库单元。
+在数据库组态工程视图中，双击本类下的“&lt;接收事件&gt;/ValueChanged/注册 变量超类::ValueChanged”，在展开的关联关系视图中，事件源对象名为触发点点名，数据库单元名称为触发点所在的数据库单元（如果与本类实例在同一个数据库单元，建议不填），事件处理对象名为本类实例点名。</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1264387445</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="其他变量值变化后触发变化的目标变量名" Name="dstVar" TagName="目标变量名"/>
+					<comment>当目标变量与本实例处于同一个数据库单元时，可以是局部的点名（不含数据库单元号）；否则应该使用全局点名（含数据库单元号，形如1202:AIObj00001）；如果点名超出长度，可以使用局部点号或全局点号（局部与全局的区别同上）。程序内部按照局部点名、全局点名、局部点号、全局点号的顺序在数据库中查找，如果点号与其他点名相同则会混淆。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING256</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+			</ClassPropertyList>
+			<ClassBehavior>
+				<CommandList/>
+				<OnEventList>
+					<OnEvent><FunctionName>ValueChanged</FunctionName><FunctionDes>接收Variable的ValueChanged事件，修改dstVar中指定实例的值（如果是输出变量，则会输出）</FunctionDes>
+						<EventInputList>
+							<RelationClassEventInput>
+								<Impact>实例级</Impact>
+								<ClassRef RefVersion="1" GlobalName="::Variable"/>
+								<OutEventRef>ValueChanged</OutEventRef>
+							</RelationClassEventInput>
+						</EventInputList>
+						<TimerInputList/>
+						<EventProcessMode>异步</EventProcessMode>
+						<comment>不修改状态，因为如果当状态变为强制后，（除非发送取消强制命令）就再也不能修改目标变量的值了</comment>
+					</OnEvent></OnEventList>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des>将组态的dstVar值转化为真正的点号</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1263969151</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2010-01-20" Creator="YANGCHUNSHENG"><ClassID Description="依据多个变量的值/状态，进行一定的运算，将运算结果输出到目标变量" Name="Tran_Variable_Ctrl" TagName="控制转发类" GlobalName="AppPubBase_Tran_Variable_Ctrl"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="Tran_Variable" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1289809005</ClassVersion>
+			<comment>与基类的区别：
+1.触发条件多样化，增加了时刻、周期和初始触发；
+2.触发后的行为通过脚本控制，不是简单的原值转发，由组态设计人员通过脚本实现（如果控制脚本为空，则退化为基类的原值转发行为）。
+触发点和目标变量的组态方式没有变化，源变量属性srcVar是为了便于在控制脚本中访问相关变量而设置，并不需要与触发点对应，可以灵活定义。
+注意：不要形成死循环。例如A触发B值取反，B又触发A取反。
+</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1289809005</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="触发目标变量变化的源变量，允许多个" Name="srcVar" TagName="源变量名"/>
+					<comment>变量名的解释规则与目标变量名一致。如果维度不够用，可以采用多个变量逐级触发</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>100</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING256</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="根据输入的源变量数据进行运算。如果运算脚本太长，过于复杂，建议使用“source &lt;脚本文件相对路径名&gt;”的方式，调用脚本文件，脚本文件的路径为相对于系统运行路径（如D:/MACS-SCADA_RunDir）的相对路径，如“source SvrOnlineFiles/CtrlTcl/TranCtrl.tcl”。注意不要使用“\”，而应该使用“/”，区分大小写，不要使用中文" Name="ctrlTcl" TagName="控制脚本"/>
+					<comment>为方便脚本编辑，在执行此脚本前预置了下述几个变量供调用：$RunDir,$bInitExec,$callerPid,$callerPName,$callerValue,$callerStatus,$dstVarPid,$dstVarPName,$dstVarValue,$dstVarStatus,$srcVarCount,$srcVarString(i),$srcVarPName(i),$srcVarPid(i),$srcVarValue(i),$srcVarStatus(i)，分别表示系统运行路径、本次执行是否为初始执行、触发点点号、触发点点名、触发点值、触发点状态、目标变量点号、目标变量点名、目标变量变化前值、目标变量变化前状态以及源变量个数、源变量字符串、点名、点号、值和状态（i表示第几个，从0开始）等。
+如果不是由值变化触发，则$callerPid为0；如果目标变量未组态或不存在，则$dstVarPid为0；如果源变量未组态，则$srcVarCount为0。
+例如
+for {set i 0} {$i&lt;$srcVarCount} {incr i} {
+   if {$srcVarValue($i) != 0} {
+     macs_WR $dstVarPName.value [expr $dstVarValue+1]
+   }
+}
+</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING1024</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="格式为HH:MM:SS，采用24小时格式，每日的此时刻执行命令ExecTran" TagName="执行时刻" Name="execTV"/>
+					<comment>如果为空，则表示无需定时执行。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING12</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="以毫秒为单位，周期执行命令ExecTran" TagName="执行周期(ms)" Name="execPeriod"/>
+					<comment>如果为0，则表示无需周期执行；在1~200之间，当做200。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>UINT32</TypeName><Default>0</Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="当完成initialize()后，是否执行变量转发操作。开启此开关，可以保证目标变量所在服务在重启后能与源变量一致。" TagName="初始执行" Name="enableInitExec"/>
+					<comment>如果初始执行脚本与触发时执行不一样，可以通过$bInitExec判断。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>LOGICAL</TypeName><Default>0</Default><Min></Min><Max></Max><Enum>
+							<EnumItem Value="0" TagValue="不执行"/>
+							<EnumItem Value="1" TagValue="执行"/></Enum></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="在初始化和srcVar变化时，是否自动根据srcVar中设置的源变量注册回调事件" Name="autoReg" TagName="自动注册回调"/>
+					<comment>由于do_setItem不能截获srcVar的变化，因此需要在设置完srcVar中的源变量后，再写autoReg。
+如果此项设置为自动注册，则不需要离线组关联关系了。</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>LOGICAL</TypeName><Default>1</Default><Min></Min><Max></Max><Enum>
+							<EnumItem Value="0" TagValue="不自动注册"/>
+							<EnumItem Value="1" TagValue="自动注册"/></Enum></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command><FunctionName>ExecTran</FunctionName><FunctionDes>执行转发操作</FunctionDes>
+						<comment>执行控制脚本，并将执行结果输出到目标变量</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>ExecTcl</FunctionName><FunctionDes>执行脚本</FunctionDes>
+						<comment>与一般脚本执行的不同之处在于：
+预置了$RunDir；
+使用g_TclExecute而不是g_TclScript引擎；
+允许异步执行。
+当有比较耗时的操作，可以通过异步执行脚本实现。</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name><Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment></comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name><Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment></comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>tcl</Name><Des>脚本</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>syn</Name><Des>同步/异步执行</Des>
+								<ValueType>boolean</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>false为异步，true为同步</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+				</CommandList>
+				<OnEventList/>
+				<ReDefOnEventList>
+				</ReDefOnEventList>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>Tran_Variable</ClassRef>
+						<FunctionName>ValueChanged</FunctionName><FuncType>接收事件</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des>注册定时器，对源变量进行初始化</Des>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>destroy</FunctionName><FuncType>虚函数</FuncType>
+						<Des>取消定时器</Des>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>do_setItem</FunctionName><FuncType>虚函数</FuncType>
+						<Des>修改定时属性时，重新注册定时器</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1276312184</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2010-04-02" Creator="YANGCHUNSHENG"><ClassID Description="与Container类似，维护一张数据点的列表，与Container不同的是：Container的列表不动态变化，而PointList的数据点列表支持在线动态变化" Name="PointList" TagName="数据点列表类" GlobalName="AppPubBase_PointList"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::POINT" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1331884145</ClassVersion>
+			<comment>
+			</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1331884145</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="changeTime记录点列表发生变化的时间" Name="changeTime" TagName="点列表发生变化的时间"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>不可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>TIME</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="列表类型，INT8，10为全部（仅包括强制点、禁止点、报警屏蔽点），1为正常点，2为无效点，4为强制点，8为禁止点，9为报警屏蔽点" Name="listType" TagName="列表类型"/>
+					<comment>各类型点列表</comment>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT8</TypeName><Default></Default><Min></Min><Max></Max><Enum>
+							<EnumItem Value="10" TagValue="全部点列表"/>
+							<EnumItem Value="1" TagValue="正常点列表"/>
+							<EnumItem Value="2" TagValue="无效点列表"/>
+							<EnumItem Value="4" TagValue="强制点列表"/>
+							<EnumItem Value="8" TagValue="禁止点列表"/>
+							<EnumItem Value="9" TagValue="报警屏蔽点列表"/></Enum></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command><FunctionName>GetPoints</FunctionName><FunctionDes>获取点列表清单</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pids</Name><Des>返回的点号列表</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>AddPoint</FunctionName><FunctionDes>向点列表中加入实例，如果已存在则返回-1</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>数据点列表实例的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>addPointPid</Name><Des>加入点列表的实例的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>RemovePoint</FunctionName><FunctionDes>从点列表中删移去实例</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>数据点列表实例的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>rmPointPid</Name><Des>从点列表移除的实例的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>GetPoints_Sequivalent</FunctionName><FunctionDes>从冗余端获取点列表清单，实现主从机之间的点列表清单的同步</FunctionDes>
+						<comment/>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pids</Name><Des>返回的点号列表</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>out</TransDirection>
+								<comment/>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command></CommandList>
+				<OnEventList>
+					<OnEvent><FunctionName>StatusChange</FunctionName><FunctionDes>用来接收采集点的状态改变事件，如果是本列表需要记录的状态，则加入该列表；否则从列表删除。</FunctionDes>
+						<EventInputList>
+						</EventInputList>
+						<TimerInputList/>
+						<EventProcessMode>同步</EventProcessMode>
+						<comment>用来接收采集点的状态改变事件，如果是本列表需要记录的状态，则加入该列表；否则从列表删除。</comment>
+					</OnEvent>
+					<OnEvent><FunctionName>ForbidChange</FunctionName><FunctionDes>用来接收报警点的屏蔽状态改变事件，如果是本列表需要记录的状态，则加入该列表；否则从列表删除。</FunctionDes>
+						<EventInputList/>
+						<TimerInputList/>
+						<EventProcessMode>同步</EventProcessMode>
+						<comment>用来接收报警点的屏蔽状态改变事件，如果是本列表需要记录的状态，则加入该列表；否则从列表删除。</comment>
+					</OnEvent></OnEventList>
+				<ReDefOnEventList/>
+				<OutEventList>
+					<OutEvent><FunctionName>PointListChanged</FunctionName><FunctionDes>点列表发生变化输出事件</FunctionDes>
+						<comment/>
+						<ParamMode>无参数</ParamMode>
+					</OutEvent></OutEventList>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>initialize</FunctionName><FuncType>虚函数</FuncType>
+						<Des>主机从从机加载点列表；从机启动定时器，当从机处于备份状态时从主机加载点列表，定时器的周期与实时库的主从同步周期一致</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1331817849</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class><Class CreateDate="2010-04-22" Creator="YANGCHUNSHENG"><ClassID Description="Memory Out，指定长度的内存区大小直接输出，可支持纯文本输出，也支持纯整形输出（单字节、双字节、四字节），也支持文本与整形的任意拼写输出。" Name="MO" TagName="内存区输出点" GlobalName="AppPubBase_MO"/>
+			<ClassInfo>
+				<BaseClassRef GlobalName="::Variable" RefVersion="1"/>
+				<Instanteable>可实例化</Instanteable>
+			</ClassInfo>
+			<ClassVersion>1280390259</ClassVersion>
+			<comment>内存区最大长度由属性memoryLen指定，默认1024字节。父类Variable的属性valueDisplay、valueTime无意义，本类没有任何采集功能。</comment>
+			<ClassPropertyList>
+				<ClassPropertyVersion>1271999733</ClassPropertyVersion>
+				<ClassProperty><ClassPropertyID Description="以字节为单位" Name="memoryLen" TagName="内存区最大长度"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>参数项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>INT16</TypeName><Default>1024</Default><Min>0</Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="只供调试使用" Name="result" TagName="拼写或输出结果"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING128</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty>
+				<ClassProperty><ClassPropertyID Description="用来显示当前申请的内存中的内容" Name="buffer" TagName="内存区"/>
+					<comment/>
+					<PropertyProcessChar>
+						<StoreChar>自动</StoreChar>
+						<EditChar>不可组态</EditChar>
+						<VisibleChar>可视</VisibleChar>
+						<RealTimeChar>实时项</RealTimeChar>
+					</PropertyProcessChar>
+					<Size>1</Size>
+					<ValueType>基本数据类型</ValueType>
+					<BasicType><TypeName>STRING1024</TypeName><Default></Default><Min></Min><Max></Max><Enum/></BasicType></ClassProperty></ClassPropertyList>
+			<ClassBehavior>
+				<CommandList>
+					<Command><FunctionName>SetChannel_Text</FunctionName><FunctionDes>文本输出或拼写命令</FunctionDes>
+						<comment>只有当nOffset+nLen=nTotalLen时，才会向FEP输出，否则，只拼写内存块。</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nTotalLen</Name><Des>内存总大小</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>表示内存总大小，以字节为单位</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nOffset</Name><Des>内存块偏移起始地址</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>当前内存值相对于内存总大小的偏移量，以字节为单位，索引值从0开始，nOffset必须小于nTotalLen</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nLen</Name><Des>内存块大小</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>nLen+nOffset&lt;=nTotalLen</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>buf</Name><Des>内存块</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>内存块按照偏移如果超过nTotalLen将被截断</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>SetChannel_Digit</FunctionName><FunctionDes>数字输出或拼写命令</FunctionDes>
+						<comment>只有当nOffset+nLen=nTotalLen时，才会向FEP输出，否则，只拼写内存块</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nTotalLen</Name><Des>内存总大小</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>内存块大小</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nOffset</Name><Des>内存块偏移起始地址</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>当前内存值相对于内存总大小的偏移量，以字节为单位，索引值从0开始，nOffset必须小于nTotalLen</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nLen</Name><Des>内存块大小</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>nLen+nOffset&lt;=nTotalLen,nLen只支持1，2，4，8</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>buf</Name><Des>内存块</Des>
+								<ValueType>long long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>nLen=1表示INT8,nLen=2表示INT16,nLen=4表示INT32</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command>
+					<Command><FunctionName>SetChannel_Digit_AntiEndian</FunctionName><FunctionDes>反字节序的数字输出或拼写命令</FunctionDes>
+						<comment>只有当nOffset+nLen=nTotalLen时，才会向FEP输出，否则，只拼写内存块。拼写的数字与标准字节序（windows和X86架构的字节序）完全相反，而与SPARC架构的字节序相同。</comment>
+						<FuncParamTable>
+							<FuncParamItem>
+								<Name>user</Name>
+								<Des>操作员名</Des>
+								<ValueType>string</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>pid</Name>
+								<Des>被控点的点号</Des>
+								<ValueType>long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment/>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nTotalLen</Name><Des>内存总大小</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>内存块大小</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nOffset</Name><Des>内存块偏移起始地址</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>当前内存值相对于内存总大小的偏移量，以字节为单位，索引值从0开始，nOffset必须小于nTotalLen</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>nLen</Name><Des>内存块大小</Des>
+								<ValueType>unsigned long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>nLen+nOffset&lt;=nTotalLen,nLen只支持1，2，4，8</comment>
+							</FuncParamItem>
+							<FuncParamItem>
+								<Name>buf</Name><Des>内存块</Des>
+								<ValueType>long long</ValueType>
+								<TransDirection>in</TransDirection>
+								<comment>nLen=1表示INT8,nLen=2表示INT16,nLen=4表示INT32</comment>
+							</FuncParamItem>
+						</FuncParamTable>
+						<ReturnValue>
+							<Type>long</Type>
+							<Des>0成功，-1失败</Des>
+						</ReturnValue>
+					</Command></CommandList>
+				<OnEventList/>
+				<ReDefOnEventList/>
+				<OutEventList/>
+				<VirtualInterfaceList/>
+				<OverLoadList>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>is_valid</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::Variable</ClassRef>
+						<FunctionName>write_ioconfig</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>sync_period</FunctionName><FuncType>虚函数</FuncType>
+						<Des/>
+					</OverLoad>
+					<OverLoad>
+						<ClassRef>::POINT</ClassRef>
+						<FunctionName>do_setItem</FunctionName><FuncType>虚函数</FuncType>
+						<Des>输出型变量，外部标签不能修改为空</Des>
+					</OverLoad>
+				</OverLoadList>
+				<ClassBehaviorVersion>1280390259</ClassBehaviorVersion>
+			</ClassBehavior>
+		</Class></ClassList>
+</ClassFamily>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MXVFunc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><FuncInfo><Name>MxvMenuEnable</Name><Definition>MxvMenuEnable(iintValue)</Definition><ReturnType>3</ReturnType><UsedInVBS>true</UsedInVBS><Description></Description><HelpIndex></HelpIndex><Body>Function MxvMenuEnable(intValue)
+If intValue = 0 Then
+	MxvMenuEnable = True
+Else
+	MxvMenuEnable = False
+End If
+End Function</Body></FuncInfo></MXVFunc>
